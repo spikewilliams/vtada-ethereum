@@ -1,4 +1,4 @@
-require "vtada_rpc"
+require_relative "../vtada_rpc"
 
 RSpec.describe VtadaRPC do
 
