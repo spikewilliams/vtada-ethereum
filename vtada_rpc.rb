@@ -10,11 +10,11 @@ class VtadaRPC
   attr_accessor :address, :endpoint, :id, :debug
 
   @@jsonrpc = "2.0"
-  @@debug = ENV["ETH_DEBUG"]
+  @@debug = ENV["ETH_DEBUG"] || false
 
   def initialize( address = nil,
-                  endpoint = ENV["ETH_ENDPOINT"],
-                  id = ENV["ETH_DEFAULT_CLIENT_ID"])
+                  endpoint = ENV["ETH_ENDPOINT"] || "http://localhost:8545",
+                  id = ENV["ETH_DEFAULT_CLIENT_ID"] || 999)
     @address = address
     @endpoint = endpoint
     @id = id

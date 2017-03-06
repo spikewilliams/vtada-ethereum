@@ -5,6 +5,7 @@ RSpec.describe VtadaRPC do
   context "request for web3_clientVersion " do
     it "is a String" do
       vt = VtadaRPC. new
+      puts value
       value = vt. web3_clientVersion
       expect(value).to be_a(String)
     end
