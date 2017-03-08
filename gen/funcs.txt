@@ -20,7 +20,7 @@ eth_getUncleCountByBlockHash|1|D|$NAME|data|$NAME|[data]
 eth_getUncleCountByBlockNumber|1|D|$NAME|data|$NAME|[data]
 eth_getCode|1|$NAME|address = @address, block = "latest"|$NAME|[address, block]
 eth_sign|1|$NAME|data, address = @address|$NAME|[address, data]
-eth_sendTransaction|1|$NAME|origin, destination, gas, gasPrice, value, data|$NAME|[origin, destination, gas, gasPrice, value, data]
+eth_sendTransaction|1|$NAME|trans_object|$NAME|[trans_object]
 eth_sendRawTransaction
 eth_call
 eth_estimateGas

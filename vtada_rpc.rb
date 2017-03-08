@@ -39,6 +39,14 @@ class VtadaRPC
       puts "Response: " + response.to_s()
     end
 
+    if response.bad_gateway?
+      raise "Unable to connect to JSON-RPC endpont" + @endpoint
+    end
+    
+    if !response.success?
+      raise "JSON-RPC endpoint " + @endpoint + " returned http code " + response.code
+    end
+
     if response["error"]
       code = response["error"]["code"]
       message = response["error"]["message"]

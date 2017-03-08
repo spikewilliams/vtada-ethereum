@@ -2,6 +2,11 @@ require_relative "../vtada_rpc"
 
 RSpec.describe VtadaRPC do
 
+#
+#
+  ETH_ACCOUNTS = (ENV["ETH_ACCOUNTS"] ||
+            "0xdd8faf0c8999ccfe8f3a66d45ce7060c49161d16,0xbf2f3263d0697cd52ec07ac3cb386438427fea9b,0x0d89aff7c5bb18f3a797715a0eff69496c3f8ec1").split(",")
+
   context "request for web3_clientVersion " do
     it "is a String" do
       vt = VtadaRPC. new
@@ -110,7 +115,7 @@ RSpec.describe VtadaRPC do
 
   context "request for eth_getBalance " do
     it "returns an Integer" do
-      vt = VtadaRPC. new "0x14226aD04625ED4930787D87C82c6c72a5B690a1"
+      vt = VtadaRPC. new ETH_ACCOUNTS[0]
       value = vt. eth_getBalance
       expect(value).to be_an Integer
     end
@@ -124,10 +129,10 @@ RSpec.describe VtadaRPC do
     end
   end
 
-  context "request for eth_getTransactionCount " do
+  context "request for eth_getTransactionCount" do
     it "returns an Integer" do
       vt = VtadaRPC. new
-      value = vt. eth_getTransactionCount("0x14226aD04625ED4930787D87C82c6c72a5B690a1","latest")
+      value = vt. eth_getTransactionCount(new ETH_ACCOUNTS[0],"latest")
       expect(value).to be_an Integer
     end
   end
@@ -181,10 +186,50 @@ RSpec.describe VtadaRPC do
   end
 
   context "request for eth_sendTransaction " do
-    it "returns ___" do
+    it "returns String" do
       vt = VtadaRPC. new
-      value = vt. eth_sendTransaction
-      expect(value).to eq "__"
+      trans = {}
+      trans["from"] = ETH_ACCOUNTS[0]
+      trans["to"] = ETH_ACCOUNTS[1]
+      trans["data"] = "6060604052341561000c57fe5b6040516102fe3803806102fe83398101604052" +
+                      "8080518201919050505b5b33600060006101000a81548173ffffffffffffffff" +
+                      "ffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffff" +
+                      "ffffffffffff1602179055505b80600190805190602001906100829291906100" +
+                      "8a565b505b5061012f565b828054600181600116156101000203166002900490" +
+                      "600052602060002090601f016020900481019282601f106100cb57805160ff19" +
+                      "168380011785556100f9565b828001600101855582156100f9579182015b8281" +
+                      "11156100f85782518255916020019190600101906100dd565b5b509050610106" +
+                      "919061010a565b5090565b61012c91905b808211156101285760008160009055" +
+                      "50600101610110565b5090565b90565b6101c08061013e6000396000f3006060" +
+                      "6040526000357c01000000000000000000000000000000000000000000000000" +
+                      "00000000900463ffffffff16806341c0e1b514610046578063cfae3217146100" +
+                      "58575bfe5b341561004e57fe5b610056610086565b005b341561006057fe5b61" +
+                      "006861011a565b60405180826000191660001916815260200191505060405180" +
+                      "910390f35b600060009054906101000a900473ffffffffffffffffffffffffff" +
+                      "ffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373" +
+                      "ffffffffffffffffffffffffffffffffffffffff161415610117576000600090" +
+                      "54906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ff" +
+                      "ffffffffffffffffffffffffffffffffffffff16ff5b5b565b60006001426040" +
+                      "51808380546001816001161561010002031660029004801561017a5780601f10" +
+                      "61015857610100808354040283529182019161017a565b820191906000526020" +
+                      "600020905b815481529060010190602001808311610166575b50508281526020" +
+                      "0192505050604051809103902090505b905600a165627a7a723058203c8b6e5a" +
+                      "ad3868b193070dcc212d79e4215bf3bc72abe172c76009d28fa331650029"
+
+#      if value != nil
+#        trans["value"] = to_hex(value)
+#      end
+#      if gas != nil
+#        trans["gas"] = to_hex(gas)
+#      end
+#      if gasPrice != nil
+#        trans["gasPrice"] = to_hex(gasPrice)
+#      end
+#      if nonce != nil
+#        trans["nonce"] = to_hex(nonce)
+#      end
+      value = vt. eth_sendTransaction trans
+      expect(value).to be_a(String)
     end
   end
 

@@ -109,8 +109,8 @@ module GeneratedWeb3Methods
       response["result"]
     end
 
-    def eth_sendTransaction()
-      response = do_request("eth_sendTransaction")
+    def eth_sendTransaction(trans_object)
+      response = do_request("eth_sendTransaction",[trans_object])
       response["result"]
     end
 
