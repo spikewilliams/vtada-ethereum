@@ -3,10 +3,10 @@
 require "httparty"
 require "json"
 
-@method = "eth_getBalance"
-@params = ["0x14226aD04625ED4930787D87C82c6c72a5B690a1", "latest"]
+#@method = "eth_getBalance"
+#@params = ["0x14226aD04625ED4930787D87C82c6c72a5B690a1", "latest"]
 
-class VtadaRPC
+class Web3
   attr_accessor :address, :endpoint, :id, :debug
 
   @@jsonrpc = "2.0"
@@ -42,7 +42,7 @@ class VtadaRPC
     if response.bad_gateway?
       raise "Unable to connect to JSON-RPC endpont" + @endpoint
     end
-    
+
     if !response.success?
       raise "JSON-RPC endpoint " + @endpoint + " returned http code " + response.code
     end
@@ -59,11 +59,39 @@ class VtadaRPC
   require_relative "generated_web3_methods.rb"
   include GeneratedWeb3Methods
 
-  require_relative "vtada_rpc_utils.rb"
-  include VtadaRPCUtils
+
+#Utility methods
+  def to_decimal(hex)
+    if hex == nil
+      return nil
+    end
+    if hex.is_a?(Integer)
+      return hex
+    end
+    hex.to_i(16)
+  end
+
+  def to_hex(decimal)
+    if decimal == nil
+      return nil
+    end
+    if decimal.is_a?(String)
+      return decimal
+    end
+    decimal.to_s(16)
+  end
+
+  def wei_to_ether(wei)
+    1.0 * wei / 10**18
+  end
+
+  def ether_to_wei(ether)
+    ether * 10**18
+  end
+
 end
 
-w3 = VtadaRPC. new "0x14226aD04625ED4930787D87C82c6c72a5B690a1"
+w3 = Web3. new "0x14226aD04625ED4930787D87C82c6c72a5B690a1"
 #w3.address =
 #puts w3. web3_clientVersion
 #puts w3. net_version

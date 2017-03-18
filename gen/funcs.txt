@@ -21,42 +21,38 @@ eth_getUncleCountByBlockNumber|1|D|$NAME|data|$NAME|[data]
 eth_getCode|1|$NAME|address = @address, block = "latest"|$NAME|[address, block]
 eth_sign|1|$NAME|data, address = @address|$NAME|[address, data]
 eth_sendTransaction|1|$NAME|trans_object|$NAME|[trans_object]
-eth_sendRawTransaction
-eth_call
-eth_estimateGas
-eth_getBlockByHash|1|$NAME|data, full_transactions = true|$NAME|[data, full_transactions]
-eth_getBlockByNumber|1|$NAME|data, full_transactions = true|$NAME|[data, full_transactions]
-eth_getTransactionByHash
-eth_getTransactionByBlockHashAndIndex
-eth_getTransactionByBlockNumberAndIndex
-eth_getTransactionReceipt
-eth_getUncleByBlockHashAndIndex
-eth_getUncleByBlockNumberAndIndex
+eth_sendRawTransaction|1|$NAME|data|$NAME|[data]
+eth_call|1|$NAME|trans_object,block|$NAME|[trans_object, block]
+eth_estimateGas|1|$NAME|trans_object,block|$NAME|[trans_object, block]
+eth_getBlockByHash|1|$NAME|hash, full_transactions = true|$NAME|[hash, full_transactions]
+eth_getBlockByNumber|1|$NAME|number, full_transactions = true|$NAME|[number, full_transactions]
+eth_getTransactionByHash|1|$NAME|hash|$NAME|[hash]
+eth_getTransactionByBlockHashAndIndex|1|$NAME|hash, index|$NAME|[hash, index]
+eth_getTransactionByBlockNumberAndIndex|1|$NAME|number, index|$NAME|[number, index]
+eth_getTransactionReceipt|1|$NAME|hash|$NAME|[hash]
+eth_getUncleByBlockHashAndIndex|1|$NAME|hash, index|$NAME|[hash, index]
+eth_getUncleByBlockNumberAndIndex|1|$NAME|number, index|$NAME|[number, index]
 eth_getCompilers
-eth_compileLLL
-eth_compileSolidity
-eth_compileSerpent
-eth_newFilter
-eth_newBlockFilter
-eth_newPendingTransactionFilter
-eth_uninstallFilter
-eth_getFilterChanges
-eth_getFilterLogs
-eth_getLogs
+eth_compileLLL|1|$NAME|code|$NAME|[code]
+eth_compileSolidity|1|$NAME|code|$NAME|[code]
+eth_compileSerpent|1|$NAME|code|$NAME|[code]
+eth_newFilter|1|D|$NAME|fromBlock, toBlock, address, topics|$CODE|[fromBlock, toBlock, address, topics]
+eth_newBlockFilter|0|D
+eth_newPendingTransactionFilter|0|D
+eth_uninstallFilter|1|$NAME|id|$NAME|[id]
+eth_getFilterChanges|1|$NAME|id|$NAME|[id]
+eth_getFilterLogs|1|$NAME|id|$NAME|[id]
+eth_getLogs|1|$NAME|filter_obj|$NAME|[filter_obj]
 eth_getWork
-eth_submitWork
-eth_submitHashrate
-db_putString
-db_getString
-db_putHex
-db_getHex
-shh_post
+eth_submitWork|1|$NAME|nonce, powHash, mixDigest|$NAME|[nonce, powHash, mixDigest]
+eth_submitHashrate|1|$NAME|hashrate, id|$NAME|[hashrate, id]
 shh_version
+shh_post|1|$NAME|post_object|$NAME|[post_object]
 shh_newIdentity
-shh_hasIdentity
+shh_hasIdentity|1|$NAME|address|$NAME|[address]
 shh_newGroup
-shh_addToGroup
-shh_newFilter
-shh_uninstallFilter
-shh_getFilterChanges
-shh_getMessages
+shh_addToGroup|1|$NAME|address|$NAME|[address]
+shh_newFilter|1|D|$NAME|filter_object|$NAME|[filter_object]
+shh_uninstallFilter|1|$NAME|id|$NAME|[id]
+shh_getFilterChanges|1|$NAME|id|$NAME|[id]
+shh_getMessages|1|$NAME|id|$NAME|[id]

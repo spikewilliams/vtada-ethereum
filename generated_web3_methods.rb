@@ -114,58 +114,58 @@ module GeneratedWeb3Methods
       response["result"]
     end
 
-    def eth_sendRawTransaction()
-      response = do_request("eth_sendRawTransaction")
+    def eth_sendRawTransaction(data)
+      response = do_request("eth_sendRawTransaction",[data])
       response["result"]
     end
 
-    def eth_call()
-      response = do_request("eth_call")
+    def eth_call(trans_object,block)
+      response = do_request("eth_call",[trans_object, block])
       response["result"]
     end
 
-    def eth_estimateGas()
-      response = do_request("eth_estimateGas")
+    def eth_estimateGas(trans_object,block)
+      response = do_request("eth_estimateGas",[trans_object, block])
       response["result"]
     end
 
-    def eth_getBlockByHash(data, full_transactions = true)
-      response = do_request("eth_getBlockByHash",[data, full_transactions])
+    def eth_getBlockByHash(hash, full_transactions = true)
+      response = do_request("eth_getBlockByHash",[hash, full_transactions])
       response["result"]
     end
 
-    def eth_getBlockByNumber(data, full_transactions = true)
-      response = do_request("eth_getBlockByNumber",[data, full_transactions])
+    def eth_getBlockByNumber(number, full_transactions = true)
+      response = do_request("eth_getBlockByNumber",[number, full_transactions])
       response["result"]
     end
 
-    def eth_getTransactionByHash()
-      response = do_request("eth_getTransactionByHash")
+    def eth_getTransactionByHash(hash)
+      response = do_request("eth_getTransactionByHash",[hash])
       response["result"]
     end
 
-    def eth_getTransactionByBlockHashAndIndex()
-      response = do_request("eth_getTransactionByBlockHashAndIndex")
+    def eth_getTransactionByBlockHashAndIndex(hash, index)
+      response = do_request("eth_getTransactionByBlockHashAndIndex",[hash, index])
       response["result"]
     end
 
-    def eth_getTransactionByBlockNumberAndIndex()
-      response = do_request("eth_getTransactionByBlockNumberAndIndex")
+    def eth_getTransactionByBlockNumberAndIndex(number, index)
+      response = do_request("eth_getTransactionByBlockNumberAndIndex",[number, index])
       response["result"]
     end
 
-    def eth_getTransactionReceipt()
-      response = do_request("eth_getTransactionReceipt")
+    def eth_getTransactionReceipt(hash)
+      response = do_request("eth_getTransactionReceipt",[hash])
       response["result"]
     end
 
-    def eth_getUncleByBlockHashAndIndex()
-      response = do_request("eth_getUncleByBlockHashAndIndex")
+    def eth_getUncleByBlockHashAndIndex(hash, index)
+      response = do_request("eth_getUncleByBlockHashAndIndex",[hash, index])
       response["result"]
     end
 
-    def eth_getUncleByBlockNumberAndIndex()
-      response = do_request("eth_getUncleByBlockNumberAndIndex")
+    def eth_getUncleByBlockNumberAndIndex(number, index)
+      response = do_request("eth_getUncleByBlockNumberAndIndex",[number, index])
       response["result"]
     end
 
@@ -174,53 +174,53 @@ module GeneratedWeb3Methods
       response["result"]
     end
 
-    def eth_compileLLL()
-      response = do_request("eth_compileLLL")
+    def eth_compileLLL(code)
+      response = do_request("eth_compileLLL",[code])
       response["result"]
     end
 
-    def eth_compileSolidity()
-      response = do_request("eth_compileSolidity")
+    def eth_compileSolidity(code)
+      response = do_request("eth_compileSolidity",[code])
       response["result"]
     end
 
-    def eth_compileSerpent()
-      response = do_request("eth_compileSerpent")
+    def eth_compileSerpent(code)
+      response = do_request("eth_compileSerpent",[code])
       response["result"]
     end
 
-    def eth_newFilter()
-      response = do_request("eth_newFilter")
-      response["result"]
+    def eth_newFilter(fromBlock, toBlock, address, topics)
+      response = do_request("$CODE",[fromBlock, toBlock, address, topics])
+      to_decimal response["result"]
     end
 
     def eth_newBlockFilter()
       response = do_request("eth_newBlockFilter")
-      response["result"]
+      to_decimal response["result"]
     end
 
     def eth_newPendingTransactionFilter()
       response = do_request("eth_newPendingTransactionFilter")
+      to_decimal response["result"]
+    end
+
+    def eth_uninstallFilter(id)
+      response = do_request("eth_uninstallFilter",[id])
       response["result"]
     end
 
-    def eth_uninstallFilter()
-      response = do_request("eth_uninstallFilter")
+    def eth_getFilterChanges(id)
+      response = do_request("eth_getFilterChanges",[id])
       response["result"]
     end
 
-    def eth_getFilterChanges()
-      response = do_request("eth_getFilterChanges")
+    def eth_getFilterLogs(id)
+      response = do_request("eth_getFilterLogs",[id])
       response["result"]
     end
 
-    def eth_getFilterLogs()
-      response = do_request("eth_getFilterLogs")
-      response["result"]
-    end
-
-    def eth_getLogs()
-      response = do_request("eth_getLogs")
+    def eth_getLogs(filter_obj)
+      response = do_request("eth_getLogs",[filter_obj])
       response["result"]
     end
 
@@ -229,38 +229,13 @@ module GeneratedWeb3Methods
       response["result"]
     end
 
-    def eth_submitWork()
-      response = do_request("eth_submitWork")
+    def eth_submitWork(nonce, powHash, mixDigest)
+      response = do_request("eth_submitWork",[nonce, powHash, mixDigest])
       response["result"]
     end
 
-    def eth_submitHashrate()
-      response = do_request("eth_submitHashrate")
-      response["result"]
-    end
-
-    def db_putString()
-      response = do_request("db_putString")
-      response["result"]
-    end
-
-    def db_getString()
-      response = do_request("db_getString")
-      response["result"]
-    end
-
-    def db_putHex()
-      response = do_request("db_putHex")
-      response["result"]
-    end
-
-    def db_getHex()
-      response = do_request("db_getHex")
-      response["result"]
-    end
-
-    def shh_post()
-      response = do_request("shh_post")
+    def eth_submitHashrate(hashrate, id)
+      response = do_request("eth_submitHashrate",[hashrate, id])
       response["result"]
     end
 
@@ -269,13 +244,18 @@ module GeneratedWeb3Methods
       response["result"]
     end
 
+    def shh_post(post_object)
+      response = do_request("shh_post",[post_object])
+      response["result"]
+    end
+
     def shh_newIdentity()
       response = do_request("shh_newIdentity")
       response["result"]
     end
 
-    def shh_hasIdentity()
-      response = do_request("shh_hasIdentity")
+    def shh_hasIdentity(address)
+      response = do_request("shh_hasIdentity",[address])
       response["result"]
     end
 
@@ -284,28 +264,28 @@ module GeneratedWeb3Methods
       response["result"]
     end
 
-    def shh_addToGroup()
-      response = do_request("shh_addToGroup")
+    def shh_addToGroup(address)
+      response = do_request("shh_addToGroup",[address])
       response["result"]
     end
 
-    def shh_newFilter()
-      response = do_request("shh_newFilter")
+    def shh_newFilter(filter_object)
+      response = do_request("shh_newFilter",[filter_object])
+      to_decimal response["result"]
+    end
+
+    def shh_uninstallFilter(id)
+      response = do_request("shh_uninstallFilter",[id])
       response["result"]
     end
 
-    def shh_uninstallFilter()
-      response = do_request("shh_uninstallFilter")
+    def shh_getFilterChanges(id)
+      response = do_request("shh_getFilterChanges",[id])
       response["result"]
     end
 
-    def shh_getFilterChanges()
-      response = do_request("shh_getFilterChanges")
-      response["result"]
-    end
-
-    def shh_getMessages()
-      response = do_request("shh_getMessages")
+    def shh_getMessages(id)
+      response = do_request("shh_getMessages",[id])
       response["result"]
     end
 end
