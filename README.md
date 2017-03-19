@@ -8,7 +8,7 @@ Use environment variables to configure the vdata-ethereum client.
 
 To set the endpoint (default is http://localhost:8545):
 
-SET ETH_ENDPOINT=http://<hostname>:port
+SET ETH_ENDPOINT=http://hostname:port
 
 To set the client id (default is 999):
 

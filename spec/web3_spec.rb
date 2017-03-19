@@ -1,4 +1,4 @@
-require_relative "../web3"
+require "web3"
 
 RSpec.describe Web3 do
 
