@@ -64,7 +64,7 @@ module GeneratedWeb3Methods
       to_decimal response["result"]
     end
 
-    def eth_getBalance(address = @address, block = "latest")
+    def eth_getBalance(address, block = "latest")
       response = do_request("eth_getBalance",[address, block])
       to_decimal response["result"]
     end
@@ -74,7 +74,7 @@ module GeneratedWeb3Methods
       response["result"]
     end
 
-    def eth_getTransactionCount(address = @address, block = "latest")
+    def eth_getTransactionCount(address, block = "latest")
       response = do_request("eth_getTransactionCount",[address, block])
       to_decimal response["result"]
     end
@@ -99,12 +99,12 @@ module GeneratedWeb3Methods
       to_decimal response["result"]
     end
 
-    def eth_getCode(address = @address, block = "latest")
+    def eth_getCode(address, block = "latest")
       response = do_request("eth_getCode",[address, block])
       response["result"]
     end
 
-    def eth_sign(data, address = @address)
+    def eth_sign(address, data)
       response = do_request("eth_sign",[address, data])
       response["result"]
     end

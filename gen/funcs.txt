@@ -11,15 +11,15 @@ eth_hashrate|0|D
 eth_gasPrice|0|D
 eth_accounts
 eth_blockNumber|0|D
-eth_getBalance|1|D|$NAME|address = @address, block = "latest"|$NAME|[address, block]
+eth_getBalance|1|D|$NAME|address, block = "latest"|$NAME|[address, block]
 eth_getStorageAt|1|$NAME|storage_address, position, block = "latest"|$NAME|[storage_address, to_hex(position), block]
-eth_getTransactionCount|1|D|$NAME|address = @address, block = "latest"|$NAME|[address, block]
+eth_getTransactionCount|1|D|$NAME|address, block = "latest"|$NAME|[address, block]
 eth_getBlockTransactionCountByHash|1|D|$NAME|data|$NAME|[data]
 eth_getBlockTransactionCountByNumber|1|D|$NAME|block = "latest"|$NAME|[block]
 eth_getUncleCountByBlockHash|1|D|$NAME|data|$NAME|[data]
 eth_getUncleCountByBlockNumber|1|D|$NAME|data|$NAME|[data]
-eth_getCode|1|$NAME|address = @address, block = "latest"|$NAME|[address, block]
-eth_sign|1|$NAME|data, address = @address|$NAME|[address, data]
+eth_getCode|1|$NAME|address, block = "latest"|$NAME|[address, block]
+eth_sign|1|$NAME|address, data|$NAME|[address, data]
 eth_sendTransaction|1|$NAME|trans_object|$NAME|[trans_object]
 eth_sendRawTransaction|1|$NAME|data|$NAME|[data]
 eth_call|1|$NAME|trans_object,block|$NAME|[trans_object, block]

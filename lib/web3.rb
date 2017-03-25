@@ -3,19 +3,14 @@
 require "httparty"
 require "json"
 
-#@method = "eth_getBalance"
-#@params = ["0x14226aD04625ED4930787D87C82c6c72a5B690a1", "latest"]
-
 class Web3
   attr_accessor :address, :endpoint, :id, :debug
 
   @@jsonrpc = "2.0"
   @@debug = ENV["ETH_DEBUG"] || false
 
-  def initialize( address = nil,
-                  endpoint = ENV["ETH_ENDPOINT"] || "http://localhost:8545",
+  def initialize( endpoint = ENV["ETH_ENDPOINT"] || "http://localhost:8545",
                   id = ENV["ETH_DEFAULT_CLIENT_ID"] || 999)
-    @address = address
     @endpoint = endpoint
     @id = id
   end
@@ -91,7 +86,7 @@ class Web3
 
 end
 
-w3 = Web3. new "0x14226aD04625ED4930787D87C82c6c72a5B690a1"
+w3 = Web3. new
 #w3.address =
 #puts w3. web3_clientVersion
 #puts w3. net_version
