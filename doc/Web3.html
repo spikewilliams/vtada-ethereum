@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Web3 - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link"><a href="Object.html">Object</a>
+  
+</div>
+
+    <div id="includes-section" class="nav-section">
+  <h3>Included Modules</h3>
+
+  <ul class="link-list">
+  
+  
+    <li><a class="include" href="GeneratedWeb3Methods.html">GeneratedWeb3Methods</a>
+  
+  
+  </ul>
+</div>
+
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-do_request">#do_request</a>
+    
+    <li ><a href="#method-i-ether_to_wei">#ether_to_wei</a>
+    
+    <li ><a href="#method-i-to_decimal">#to_decimal</a>
+    
+    <li ><a href="#method-i-to_hex">#to_hex</a>
+    
+    <li ><a href="#method-i-wei_to_ether">#wei_to_ether</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Web3">
+  <h1 id="class-Web3" class="class">
+    class Web3
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+    <section class="attribute-method-details" class="method-section">
+      <header>
+        <h3>Attributes</h3>
+      </header>
+
+      
+      <div id="attribute-i-address" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">address</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-debug" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">debug</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-endpoint" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">endpoint</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-id" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">id</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+    </section>
+    
+
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">( endpoint = ENV["ETH_ENDPOINT"] || "http://localhost:8545", id = ENV["ETH_DEFAULT_CLIENT_ID"] || 999)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/web3.rb, line 12</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>( <span class="ruby-identifier">endpoint</span> = <span class="ruby-constant">ENV</span>[<span class="ruby-string">&quot;ETH_ENDPOINT&quot;</span>] <span class="ruby-operator">||</span> <span class="ruby-string">&quot;http://localhost:8545&quot;</span>,
+                <span class="ruby-identifier">id</span> = <span class="ruby-constant">ENV</span>[<span class="ruby-string">&quot;ETH_DEFAULT_CLIENT_ID&quot;</span>] <span class="ruby-operator">||</span> <span class="ruby-value">999</span>)
+  <span class="ruby-ivar">@endpoint</span> = <span class="ruby-identifier">endpoint</span>
+  <span class="ruby-ivar">@id</span> = <span class="ruby-identifier">id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-do_request" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">do_request</span><span
+            class="method-args">(method, params = [], id = @id)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="do_request-source">
+            <pre><span class="ruby-comment"># File lib/web3.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">do_request</span>(<span class="ruby-identifier">method</span>, <span class="ruby-identifier">params</span> = [], <span class="ruby-identifier">id</span> = <span class="ruby-ivar">@id</span>) <span class="ruby-comment">#TODO: More error handling</span>
+  <span class="ruby-identifier">request_json</span> = { <span class="ruby-value">:jsonrpc</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">@@jsonrpc</span>,
+             <span class="ruby-value">:method</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">method</span>,
+             <span class="ruby-value">:params</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>,
+             <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@id</span>
+           }.<span class="ruby-identifier">to_json</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">@@debug</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Request to &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@endpoint</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;: &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">request_json</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;  ....&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">response</span> = <span class="ruby-constant">HTTParty</span>.<span class="ruby-identifier">post</span>(<span class="ruby-ivar">@endpoint</span>,
+      <span class="ruby-value">:body</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">request_json</span>,
+      <span class="ruby-value">:headers</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-string">&#39;Content-Type&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;application/json&#39;</span> } )
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">@@debug</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Response: &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">response</span>.<span class="ruby-identifier">to_s</span>()
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">response</span>.<span class="ruby-identifier">bad_gateway?</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;Unable to connect to JSON-RPC endpont&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@endpoint</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">response</span>.<span class="ruby-identifier">success?</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;JSON-RPC endpoint &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@endpoint</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot; returned http code &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">response</span>.<span class="ruby-identifier">code</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;error&quot;</span>]
+    <span class="ruby-identifier">code</span> = <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;error&quot;</span>][<span class="ruby-string">&quot;code&quot;</span>]
+    <span class="ruby-identifier">message</span> = <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;error&quot;</span>][<span class="ruby-string">&quot;message&quot;</span>]
+    <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;In response to &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">method</span> <span class="ruby-operator">+</span> <span class="ruby-node">&quot; request, JSON-RPC endpoint returned error #&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">code</span>.<span class="ruby-identifier">to_s</span>() <span class="ruby-operator">+</span> <span class="ruby-string">&quot;: &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">message</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">response</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-ether_to_wei" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">ether_to_wei</span><span
+            class="method-args">(ether)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="ether_to_wei-source">
+            <pre><span class="ruby-comment"># File lib/web3.rb, line 83</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ether_to_wei</span>(<span class="ruby-identifier">ether</span>)
+  <span class="ruby-identifier">ether</span> <span class="ruby-operator">*</span> <span class="ruby-value">10</span><span class="ruby-operator">**</span><span class="ruby-value">18</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-to_decimal" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_decimal</span><span
+            class="method-args">(hex)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Utility methods</p>
+          
+          
+
+          
+          <div class="method-source-code" id="to_decimal-source">
+            <pre><span class="ruby-comment"># File lib/web3.rb, line 59</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_decimal</span>(<span class="ruby-identifier">hex</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">hex</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">hex</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Integer</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">hex</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">hex</span>.<span class="ruby-identifier">to_i</span>(<span class="ruby-value">16</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-to_hex" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_hex</span><span
+            class="method-args">(decimal)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="to_hex-source">
+            <pre><span class="ruby-comment"># File lib/web3.rb, line 69</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_hex</span>(<span class="ruby-identifier">decimal</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">decimal</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">decimal</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">decimal</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">decimal</span>.<span class="ruby-identifier">to_s</span>(<span class="ruby-value">16</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-wei_to_ether" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">wei_to_ether</span><span
+            class="method-args">(wei)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="wei_to_ether-source">
+            <pre><span class="ruby-comment"># File lib/web3.rb, line 79</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">wei_to_ether</span>(<span class="ruby-identifier">wei</span>)
+  <span class="ruby-value">1.0</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">wei</span> <span class="ruby-operator">/</span> <span class="ruby-value">10</span><span class="ruby-operator">**</span><span class="ruby-value">18</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.2.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
