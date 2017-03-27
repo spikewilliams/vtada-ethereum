@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'web3'
   s.version     = '0.2.1'
-  s.date        = '2017-03-26'
+  s.date        = '2017-03-27'
   s.summary     = "A client library for connecting to an Ethereum Web3 JSON RPC service"
   s.description = s.summary
   s.authors     = ["Spike Williams"]
@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.homepage    = 'https://github.com/spikewilliams/vtada-ethereum'
   s.license       = 'MIT'
 
-  s.add_development_dependency "hanna-nouveau"
-  s.add_runtime_dependency "httparty"
-  s.add_runtime_dependency "json"
+  s.add_development_dependency "hanna-nouveau", '~> 0'
+  s.add_runtime_dependency "httparty", '~> 0'
+  s.add_runtime_dependency "json", '~> 0'
 end
