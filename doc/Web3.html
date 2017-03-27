@@ -58,7 +58,7 @@
   <h3>Parent</h3>
 
   
-  <p class="link"><a href="Object.html">Object</a>
+  <p class="link">Object
   
 </div>
 
@@ -206,7 +206,7 @@
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File lib/web3.rb, line 12</span>
+            <pre><span class="ruby-comment"># File web3.rb, line 12</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>( <span class="ruby-identifier">endpoint</span> = <span class="ruby-constant">ENV</span>[<span class="ruby-string">&quot;ETH_ENDPOINT&quot;</span>] <span class="ruby-operator">||</span> <span class="ruby-string">&quot;http://localhost:8545&quot;</span>,
                 <span class="ruby-identifier">id</span> = <span class="ruby-constant">ENV</span>[<span class="ruby-string">&quot;ETH_DEFAULT_CLIENT_ID&quot;</span>] <span class="ruby-operator">||</span> <span class="ruby-value">999</span>)
   <span class="ruby-ivar">@endpoint</span> = <span class="ruby-identifier">endpoint</span>
@@ -249,7 +249,7 @@
 
           
           <div class="method-source-code" id="do_request-source">
-            <pre><span class="ruby-comment"># File lib/web3.rb, line 18</span>
+            <pre><span class="ruby-comment"># File web3.rb, line 18</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">do_request</span>(<span class="ruby-identifier">method</span>, <span class="ruby-identifier">params</span> = [], <span class="ruby-identifier">id</span> = <span class="ruby-ivar">@id</span>) <span class="ruby-comment">#TODO: More error handling</span>
   <span class="ruby-identifier">request_json</span> = { <span class="ruby-value">:jsonrpc</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">@@jsonrpc</span>,
              <span class="ruby-value">:method</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">method</span>,
@@ -313,7 +313,7 @@
 
           
           <div class="method-source-code" id="ether_to_wei-source">
-            <pre><span class="ruby-comment"># File lib/web3.rb, line 83</span>
+            <pre><span class="ruby-comment"># File web3.rb, line 83</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">ether_to_wei</span>(<span class="ruby-identifier">ether</span>)
   <span class="ruby-identifier">ether</span> <span class="ruby-operator">*</span> <span class="ruby-value">10</span><span class="ruby-operator">**</span><span class="ruby-value">18</span>
 <span class="ruby-keyword">end</span></pre>
@@ -346,7 +346,7 @@
 
           
           <div class="method-source-code" id="to_decimal-source">
-            <pre><span class="ruby-comment"># File lib/web3.rb, line 59</span>
+            <pre><span class="ruby-comment"># File web3.rb, line 59</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">to_decimal</span>(<span class="ruby-identifier">hex</span>)
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">hex</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
     <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
@@ -385,7 +385,7 @@
 
           
           <div class="method-source-code" id="to_hex-source">
-            <pre><span class="ruby-comment"># File lib/web3.rb, line 69</span>
+            <pre><span class="ruby-comment"># File web3.rb, line 69</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">to_hex</span>(<span class="ruby-identifier">decimal</span>)
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">decimal</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
     <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
@@ -424,7 +424,7 @@
 
           
           <div class="method-source-code" id="wei_to_ether-source">
-            <pre><span class="ruby-comment"># File lib/web3.rb, line 79</span>
+            <pre><span class="ruby-comment"># File web3.rb, line 79</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">wei_to_ether</span>(<span class="ruby-identifier">wei</span>)
   <span class="ruby-value">1.0</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">wei</span> <span class="ruby-operator">/</span> <span class="ruby-value">10</span><span class="ruby-operator">**</span><span class="ruby-value">18</span>
 <span class="ruby-keyword">end</span></pre>

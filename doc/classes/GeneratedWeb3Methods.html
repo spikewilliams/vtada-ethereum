@@ -1,0 +1,1162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang='en'>
+  <head>
+    <title>GeneratedWeb3Methods</title>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+    <link href='../css/style.css' media='screen' rel='stylesheet' type='text/css'>
+    <script type='text/javascript'>
+      function popupCode(url) {
+        window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+      }
+      
+      function toggleCode(id) {
+        var code = document.getElementById(id)
+      
+        code.style.display = code.style.display != 'block' ? 'block' : 'none'
+        return true
+      }
+      
+      // Make codeblocks hidden by default
+      document.writeln('<' + 'style type="text/css">.method .source pre { display: none }<\/style>')
+    </script>
+  </head>
+  <body class='page'>
+    <div class='class' id='wrapper'>
+      <div class='header'>
+        <h1 class='name'>
+          <span class='type'>module</span>
+          GeneratedWeb3Methods
+        </h1>
+        <ol class='paths'>
+          <li>
+            <a href="../files/generated_web3_methods_rb.html">generated_web3_methods.rb</a>
+          </li>
+        </ol>
+      </div>
+      <div id='content'>
+        <div id='text'>
+          <div id='description'></div>
+          <div id='method-list'>
+            <h2>Methods</h2>
+            <h3>Public Instance</h3>
+            <ol>
+              <li><a href="#method-i-eth_accounts">eth_accounts</a></li>
+              <li><a href="#method-i-eth_blockNumber">eth_blockNumber</a></li>
+              <li><a href="#method-i-eth_call">eth_call</a></li>
+              <li><a href="#method-i-eth_coinbase">eth_coinbase</a></li>
+              <li><a href="#method-i-eth_compileLLL">eth_compileLLL</a></li>
+              <li><a href="#method-i-eth_compileSerpent">eth_compileSerpent</a></li>
+              <li><a href="#method-i-eth_compileSolidity">eth_compileSolidity</a></li>
+              <li><a href="#method-i-eth_estimateGas">eth_estimateGas</a></li>
+              <li><a href="#method-i-eth_gasPrice">eth_gasPrice</a></li>
+              <li><a href="#method-i-eth_getBalance">eth_getBalance</a></li>
+              <li><a href="#method-i-eth_getBlockByHash">eth_getBlockByHash</a></li>
+              <li><a href="#method-i-eth_getBlockByNumber">eth_getBlockByNumber</a></li>
+              <li><a href="#method-i-eth_getBlockTransactionCountByHash">eth_getBlockTransactionCountByHash</a></li>
+              <li><a href="#method-i-eth_getBlockTransactionCountByNumber">eth_getBlockTransactionCountByNumber</a></li>
+              <li><a href="#method-i-eth_getCode">eth_getCode</a></li>
+              <li><a href="#method-i-eth_getCompilers">eth_getCompilers</a></li>
+              <li><a href="#method-i-eth_getFilterChanges">eth_getFilterChanges</a></li>
+              <li><a href="#method-i-eth_getFilterLogs">eth_getFilterLogs</a></li>
+              <li><a href="#method-i-eth_getLogs">eth_getLogs</a></li>
+              <li><a href="#method-i-eth_getStorageAt">eth_getStorageAt</a></li>
+              <li><a href="#method-i-eth_getTransactionByBlockHashAndIndex">eth_getTransactionByBlockHashAndIndex</a></li>
+              <li><a href="#method-i-eth_getTransactionByBlockNumberAndIndex">eth_getTransactionByBlockNumberAndIndex</a></li>
+              <li><a href="#method-i-eth_getTransactionByHash">eth_getTransactionByHash</a></li>
+              <li><a href="#method-i-eth_getTransactionCount">eth_getTransactionCount</a></li>
+              <li><a href="#method-i-eth_getTransactionReceipt">eth_getTransactionReceipt</a></li>
+              <li><a href="#method-i-eth_getUncleByBlockHashAndIndex">eth_getUncleByBlockHashAndIndex</a></li>
+              <li><a href="#method-i-eth_getUncleByBlockNumberAndIndex">eth_getUncleByBlockNumberAndIndex</a></li>
+              <li><a href="#method-i-eth_getUncleCountByBlockHash">eth_getUncleCountByBlockHash</a></li>
+              <li><a href="#method-i-eth_getUncleCountByBlockNumber">eth_getUncleCountByBlockNumber</a></li>
+              <li><a href="#method-i-eth_getWork">eth_getWork</a></li>
+              <li><a href="#method-i-eth_hashrate">eth_hashrate</a></li>
+              <li><a href="#method-i-eth_mining">eth_mining</a></li>
+              <li><a href="#method-i-eth_newBlockFilter">eth_newBlockFilter</a></li>
+              <li><a href="#method-i-eth_newFilter">eth_newFilter</a></li>
+              <li><a href="#method-i-eth_newPendingTransactionFilter">eth_newPendingTransactionFilter</a></li>
+              <li><a href="#method-i-eth_protocolVersion">eth_protocolVersion</a></li>
+              <li><a href="#method-i-eth_sendRawTransaction">eth_sendRawTransaction</a></li>
+              <li><a href="#method-i-eth_sendTransaction">eth_sendTransaction</a></li>
+              <li><a href="#method-i-eth_sign">eth_sign</a></li>
+              <li><a href="#method-i-eth_submitHashrate">eth_submitHashrate</a></li>
+              <li><a href="#method-i-eth_submitWork">eth_submitWork</a></li>
+              <li><a href="#method-i-eth_syncing">eth_syncing</a></li>
+              <li><a href="#method-i-eth_uninstallFilter">eth_uninstallFilter</a></li>
+              <li><a href="#method-i-net_listening">net_listening</a></li>
+              <li><a href="#method-i-net_peerCount">net_peerCount</a></li>
+              <li><a href="#method-i-net_version">net_version</a></li>
+              <li><a href="#method-i-shh_addToGroup">shh_addToGroup</a></li>
+              <li><a href="#method-i-shh_getFilterChanges">shh_getFilterChanges</a></li>
+              <li><a href="#method-i-shh_getMessages">shh_getMessages</a></li>
+              <li><a href="#method-i-shh_hasIdentity">shh_hasIdentity</a></li>
+              <li><a href="#method-i-shh_newFilter">shh_newFilter</a></li>
+              <li><a href="#method-i-shh_newGroup">shh_newGroup</a></li>
+              <li><a href="#method-i-shh_newIdentity">shh_newIdentity</a></li>
+              <li><a href="#method-i-shh_post">shh_post</a></li>
+              <li><a href="#method-i-shh_uninstallFilter">shh_uninstallFilter</a></li>
+              <li><a href="#method-i-shh_version">shh_version</a></li>
+              <li><a href="#method-i-web3_clientVersion">web3_clientVersion</a></li>
+              <li><a href="#method-i-web3_sha3">web3_sha3</a></li>
+            </ol>
+          </div>
+          <div id='context'>
+          </div>
+          <div id='section'>
+            <div id='methods'>
+              <h2>Public Instance methods</h2>
+              <div class='method public-instance' id='method-method-i-eth_accounts'>
+                <a name='method-i-eth_accounts'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_accounts</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_accounts">github.com/ethereum/wiki/wiki/JSON-RPC#eth_accounts</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_accounts-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_accounts-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 69</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_accounts</span>()&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;eth_accounts&quot;</span>)&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_blockNumber'>
+                <a name='method-i-eth_blockNumber'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_blockNumber</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_blocknumber">github.com/ethereum/wiki/wiki/JSON-RPC#eth_blocknumber</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_blockNumber-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_blockNumber-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 75</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_blockNumber</span>()&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;eth_blockNumber&quot;</span>)&#x000A;  <span class="ruby-identifier">to_decimal</span> <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_call'>
+                <a name='method-i-eth_call'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_call</span>
+                  <span class='arguments'>(trans_object,block)</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_call">github.com/ethereum/wiki/wiki/JSON-RPC#eth_call</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_call-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_call-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 147</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_call</span>(<span class="ruby-identifier">trans_object</span>,<span class="ruby-identifier">block</span>)&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;eth_call&quot;</span>,[<span class="ruby-identifier">trans_object</span>, <span class="ruby-identifier">block</span>])&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_coinbase'>
+                <a name='method-i-eth_coinbase'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_coinbase</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_coinbase">github.com/ethereum/wiki/wiki/JSON-RPC#eth_coinbase</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_coinbase-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_coinbase-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 45</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_coinbase</span>()&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;eth_coinbase&quot;</span>)&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_compileLLL'>
+                <a name='method-i-eth_compileLLL'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_compileLLL</span>
+                  <span class='arguments'>(code)</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_compilelll">github.com/ethereum/wiki/wiki/JSON-RPC#eth_compilelll</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_compileLLL-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_compileLLL-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 213</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_compileLLL</span>(<span class="ruby-identifier">code</span>)&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;eth_compileLLL&quot;</span>,[<span class="ruby-identifier">code</span>])&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_compileSerpent'>
+                <a name='method-i-eth_compileSerpent'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_compileSerpent</span>
+                  <span class='arguments'>(code)</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_compileserpent">github.com/ethereum/wiki/wiki/JSON-RPC#eth_compileserpent</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_compileSerpent-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_compileSerpent-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 225</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_compileSerpent</span>(<span class="ruby-identifier">code</span>)&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;eth_compileSerpent&quot;</span>,[<span class="ruby-identifier">code</span>])&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_compileSolidity'>
+                <a name='method-i-eth_compileSolidity'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_compileSolidity</span>
+                  <span class='arguments'>(code)</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_compilesolidity">github.com/ethereum/wiki/wiki/JSON-RPC#eth_compilesolidity</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_compileSolidity-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_compileSolidity-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 219</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_compileSolidity</span>(<span class="ruby-identifier">code</span>)&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;eth_compileSolidity&quot;</span>,[<span class="ruby-identifier">code</span>])&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_estimateGas'>
+                <a name='method-i-eth_estimateGas'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_estimateGas</span>
+                  <span class='arguments'>(trans_object,block)</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_estimategas">github.com/ethereum/wiki/wiki/JSON-RPC#eth_estimategas</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_estimateGas-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_estimateGas-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 153</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_estimateGas</span>(<span class="ruby-identifier">trans_object</span>,<span class="ruby-identifier">block</span>)&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;eth_estimateGas&quot;</span>,[<span class="ruby-identifier">trans_object</span>, <span class="ruby-identifier">block</span>])&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_gasPrice'>
+                <a name='method-i-eth_gasPrice'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_gasPrice</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_gasprice">github.com/ethereum/wiki/wiki/JSON-RPC#eth_gasprice</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_gasPrice-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_gasPrice-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 63</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_gasPrice</span>()&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;eth_gasPrice&quot;</span>)&#x000A;  <span class="ruby-identifier">to_decimal</span> <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_getBalance'>
+                <a name='method-i-eth_getBalance'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_getBalance</span>
+                  <span class='arguments'>(address, block = "latest")</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_getbalance">github.com/ethereum/wiki/wiki/JSON-RPC#eth_getbalance</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_getBalance-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_getBalance-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 81</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_getBalance</span>(<span class="ruby-identifier">address</span>, <span class="ruby-identifier">block</span> = <span class="ruby-string">&quot;latest&quot;</span>)&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;eth_getBalance&quot;</span>,[<span class="ruby-identifier">address</span>, <span class="ruby-identifier">block</span>])&#x000A;  <span class="ruby-identifier">to_decimal</span> <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_getBlockByHash'>
+                <a name='method-i-eth_getBlockByHash'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_getBlockByHash</span>
+                  <span class='arguments'>(hash, full_transactions = true)</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_getblockbyhash">github.com/ethereum/wiki/wiki/JSON-RPC#eth_getblockbyhash</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_getBlockByHash-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_getBlockByHash-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 159</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_getBlockByHash</span>(<span class="ruby-identifier">hash</span>, <span class="ruby-identifier">full_transactions</span> = <span class="ruby-keyword">true</span>)&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;eth_getBlockByHash&quot;</span>,[<span class="ruby-identifier">hash</span>, <span class="ruby-identifier">full_transactions</span>])&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_getBlockByNumber'>
+                <a name='method-i-eth_getBlockByNumber'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_getBlockByNumber</span>
+                  <span class='arguments'>(number, full_transactions = true)</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_getblockbynumber">github.com/ethereum/wiki/wiki/JSON-RPC#eth_getblockbynumber</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_getBlockByNumber-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_getBlockByNumber-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 165</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_getBlockByNumber</span>(<span class="ruby-identifier">number</span>, <span class="ruby-identifier">full_transactions</span> = <span class="ruby-keyword">true</span>)&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;eth_getBlockByNumber&quot;</span>,[<span class="ruby-identifier">number</span>, <span class="ruby-identifier">full_transactions</span>])&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_getBlockTransactionCountByHash'>
+                <a name='method-i-eth_getBlockTransactionCountByHash'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_getBlockTransactionCountByHash</span>
+                  <span class='arguments'>(data)</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_getblocktransactioncountbyhash">github.com/ethereum/wiki/wiki/JSON-RPC#eth_getblocktransactioncountbyhash</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_getBlockTransactionCountByHash-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_getBlockTransactionCountByHash-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 99</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_getBlockTransactionCountByHash</span>(<span class="ruby-identifier">data</span>)&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;eth_getBlockTransactionCountByHash&quot;</span>,[<span class="ruby-identifier">data</span>])&#x000A;  <span class="ruby-identifier">to_decimal</span> <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_getBlockTransactionCountByNumber'>
+                <a name='method-i-eth_getBlockTransactionCountByNumber'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_getBlockTransactionCountByNumber</span>
+                  <span class='arguments'>(block = "latest")</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_getblocktransactioncountbynumber">github.com/ethereum/wiki/wiki/JSON-RPC#eth_getblocktransactioncountbynumber</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_getBlockTransactionCountByNumber-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_getBlockTransactionCountByNumber-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 105</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_getBlockTransactionCountByNumber</span>(<span class="ruby-identifier">block</span> = <span class="ruby-string">&quot;latest&quot;</span>)&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;eth_getBlockTransactionCountByNumber&quot;</span>,[<span class="ruby-identifier">block</span>])&#x000A;  <span class="ruby-identifier">to_decimal</span> <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_getCode'>
+                <a name='method-i-eth_getCode'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_getCode</span>
+                  <span class='arguments'>(address, block = "latest")</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_getcode">github.com/ethereum/wiki/wiki/JSON-RPC#eth_getcode</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_getCode-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_getCode-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 123</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_getCode</span>(<span class="ruby-identifier">address</span>, <span class="ruby-identifier">block</span> = <span class="ruby-string">&quot;latest&quot;</span>)&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;eth_getCode&quot;</span>,[<span class="ruby-identifier">address</span>, <span class="ruby-identifier">block</span>])&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_getCompilers'>
+                <a name='method-i-eth_getCompilers'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_getCompilers</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_getcompilers">github.com/ethereum/wiki/wiki/JSON-RPC#eth_getcompilers</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_getCompilers-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_getCompilers-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 207</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_getCompilers</span>()&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;eth_getCompilers&quot;</span>)&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_getFilterChanges'>
+                <a name='method-i-eth_getFilterChanges'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_getFilterChanges</span>
+                  <span class='arguments'>(id)</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_getfilterchanges">github.com/ethereum/wiki/wiki/JSON-RPC#eth_getfilterchanges</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_getFilterChanges-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_getFilterChanges-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 255</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_getFilterChanges</span>(<span class="ruby-identifier">id</span>)&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;eth_getFilterChanges&quot;</span>,[<span class="ruby-identifier">id</span>])&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_getFilterLogs'>
+                <a name='method-i-eth_getFilterLogs'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_getFilterLogs</span>
+                  <span class='arguments'>(id)</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_getfilterlogs">github.com/ethereum/wiki/wiki/JSON-RPC#eth_getfilterlogs</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_getFilterLogs-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_getFilterLogs-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 261</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_getFilterLogs</span>(<span class="ruby-identifier">id</span>)&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;eth_getFilterLogs&quot;</span>,[<span class="ruby-identifier">id</span>])&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_getLogs'>
+                <a name='method-i-eth_getLogs'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_getLogs</span>
+                  <span class='arguments'>(filter_obj)</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_getlogs">github.com/ethereum/wiki/wiki/JSON-RPC#eth_getlogs</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_getLogs-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_getLogs-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 267</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_getLogs</span>(<span class="ruby-identifier">filter_obj</span>)&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;eth_getLogs&quot;</span>,[<span class="ruby-identifier">filter_obj</span>])&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_getStorageAt'>
+                <a name='method-i-eth_getStorageAt'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_getStorageAt</span>
+                  <span class='arguments'>(storage_address, position, block = "latest")</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_getstorageat">github.com/ethereum/wiki/wiki/JSON-RPC#eth_getstorageat</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_getStorageAt-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_getStorageAt-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 87</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_getStorageAt</span>(<span class="ruby-identifier">storage_address</span>, <span class="ruby-identifier">position</span>, <span class="ruby-identifier">block</span> = <span class="ruby-string">&quot;latest&quot;</span>)&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;eth_getStorageAt&quot;</span>,[<span class="ruby-identifier">storage_address</span>, <span class="ruby-identifier">to_hex</span>(<span class="ruby-identifier">position</span>), <span class="ruby-identifier">block</span>])&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_getTransactionByBlockHashAndIndex'>
+                <a name='method-i-eth_getTransactionByBlockHashAndIndex'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_getTransactionByBlockHashAndIndex</span>
+                  <span class='arguments'>(hash, index)</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_gettransactionbyblockhashandindex">github.com/ethereum/wiki/wiki/JSON-RPC#eth_gettransactionbyblockhashandindex</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_getTransactionByBlockHashAndIndex-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_getTransactionByBlockHashAndIndex-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 177</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_getTransactionByBlockHashAndIndex</span>(<span class="ruby-identifier">hash</span>, <span class="ruby-identifier">index</span>)&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;eth_getTransactionByBlockHashAndIndex&quot;</span>,[<span class="ruby-identifier">hash</span>, <span class="ruby-identifier">index</span>])&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_getTransactionByBlockNumberAndIndex'>
+                <a name='method-i-eth_getTransactionByBlockNumberAndIndex'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_getTransactionByBlockNumberAndIndex</span>
+                  <span class='arguments'>(number, index)</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_gettransactionbyblocknumberandindex">github.com/ethereum/wiki/wiki/JSON-RPC#eth_gettransactionbyblocknumberandindex</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_getTransactionByBlockNumberAndIndex-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_getTransactionByBlockNumberAndIndex-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 183</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_getTransactionByBlockNumberAndIndex</span>(<span class="ruby-identifier">number</span>, <span class="ruby-identifier">index</span>)&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;eth_getTransactionByBlockNumberAndIndex&quot;</span>,[<span class="ruby-identifier">number</span>, <span class="ruby-identifier">index</span>])&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_getTransactionByHash'>
+                <a name='method-i-eth_getTransactionByHash'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_getTransactionByHash</span>
+                  <span class='arguments'>(hash)</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_gettransactionbyhash">github.com/ethereum/wiki/wiki/JSON-RPC#eth_gettransactionbyhash</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_getTransactionByHash-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_getTransactionByHash-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 171</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_getTransactionByHash</span>(<span class="ruby-identifier">hash</span>)&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;eth_getTransactionByHash&quot;</span>,[<span class="ruby-identifier">hash</span>])&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_getTransactionCount'>
+                <a name='method-i-eth_getTransactionCount'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_getTransactionCount</span>
+                  <span class='arguments'>(address, block = "latest")</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_gettransactioncount">github.com/ethereum/wiki/wiki/JSON-RPC#eth_gettransactioncount</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_getTransactionCount-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_getTransactionCount-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 93</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_getTransactionCount</span>(<span class="ruby-identifier">address</span>, <span class="ruby-identifier">block</span> = <span class="ruby-string">&quot;latest&quot;</span>)&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;eth_getTransactionCount&quot;</span>,[<span class="ruby-identifier">address</span>, <span class="ruby-identifier">block</span>])&#x000A;  <span class="ruby-identifier">to_decimal</span> <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_getTransactionReceipt'>
+                <a name='method-i-eth_getTransactionReceipt'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_getTransactionReceipt</span>
+                  <span class='arguments'>(hash)</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_gettransactionreceipt">github.com/ethereum/wiki/wiki/JSON-RPC#eth_gettransactionreceipt</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_getTransactionReceipt-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_getTransactionReceipt-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 189</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_getTransactionReceipt</span>(<span class="ruby-identifier">hash</span>)&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;eth_getTransactionReceipt&quot;</span>,[<span class="ruby-identifier">hash</span>])&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_getUncleByBlockHashAndIndex'>
+                <a name='method-i-eth_getUncleByBlockHashAndIndex'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_getUncleByBlockHashAndIndex</span>
+                  <span class='arguments'>(hash, index)</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_getunclebyblockhashandindex">github.com/ethereum/wiki/wiki/JSON-RPC#eth_getunclebyblockhashandindex</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_getUncleByBlockHashAndIndex-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_getUncleByBlockHashAndIndex-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 195</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_getUncleByBlockHashAndIndex</span>(<span class="ruby-identifier">hash</span>, <span class="ruby-identifier">index</span>)&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;eth_getUncleByBlockHashAndIndex&quot;</span>,[<span class="ruby-identifier">hash</span>, <span class="ruby-identifier">index</span>])&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_getUncleByBlockNumberAndIndex'>
+                <a name='method-i-eth_getUncleByBlockNumberAndIndex'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_getUncleByBlockNumberAndIndex</span>
+                  <span class='arguments'>(number, index)</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_getunclebyblocknumberandindex">github.com/ethereum/wiki/wiki/JSON-RPC#eth_getunclebyblocknumberandindex</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_getUncleByBlockNumberAndIndex-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_getUncleByBlockNumberAndIndex-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 201</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_getUncleByBlockNumberAndIndex</span>(<span class="ruby-identifier">number</span>, <span class="ruby-identifier">index</span>)&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;eth_getUncleByBlockNumberAndIndex&quot;</span>,[<span class="ruby-identifier">number</span>, <span class="ruby-identifier">index</span>])&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_getUncleCountByBlockHash'>
+                <a name='method-i-eth_getUncleCountByBlockHash'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_getUncleCountByBlockHash</span>
+                  <span class='arguments'>(data)</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_getunclecountbyblockhash">github.com/ethereum/wiki/wiki/JSON-RPC#eth_getunclecountbyblockhash</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_getUncleCountByBlockHash-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_getUncleCountByBlockHash-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 111</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_getUncleCountByBlockHash</span>(<span class="ruby-identifier">data</span>)&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;eth_getUncleCountByBlockHash&quot;</span>,[<span class="ruby-identifier">data</span>])&#x000A;  <span class="ruby-identifier">to_decimal</span> <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_getUncleCountByBlockNumber'>
+                <a name='method-i-eth_getUncleCountByBlockNumber'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_getUncleCountByBlockNumber</span>
+                  <span class='arguments'>(data)</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_getunclecountbyblocknumber">github.com/ethereum/wiki/wiki/JSON-RPC#eth_getunclecountbyblocknumber</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_getUncleCountByBlockNumber-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_getUncleCountByBlockNumber-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 117</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_getUncleCountByBlockNumber</span>(<span class="ruby-identifier">data</span>)&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;eth_getUncleCountByBlockNumber&quot;</span>,[<span class="ruby-identifier">data</span>])&#x000A;  <span class="ruby-identifier">to_decimal</span> <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_getWork'>
+                <a name='method-i-eth_getWork'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_getWork</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_getwork">github.com/ethereum/wiki/wiki/JSON-RPC#eth_getwork</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_getWork-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_getWork-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 273</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_getWork</span>()&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;eth_getWork&quot;</span>)&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_hashrate'>
+                <a name='method-i-eth_hashrate'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_hashrate</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_hashrate">github.com/ethereum/wiki/wiki/JSON-RPC#eth_hashrate</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_hashrate-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_hashrate-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 57</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_hashrate</span>()&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;eth_hashrate&quot;</span>)&#x000A;  <span class="ruby-identifier">to_decimal</span> <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_mining'>
+                <a name='method-i-eth_mining'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_mining</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_mining">github.com/ethereum/wiki/wiki/JSON-RPC#eth_mining</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_mining-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_mining-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 51</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_mining</span>()&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;eth_mining&quot;</span>)&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_newBlockFilter'>
+                <a name='method-i-eth_newBlockFilter'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_newBlockFilter</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_newblockfilter">github.com/ethereum/wiki/wiki/JSON-RPC#eth_newblockfilter</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_newBlockFilter-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_newBlockFilter-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 237</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_newBlockFilter</span>()&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;eth_newBlockFilter&quot;</span>)&#x000A;  <span class="ruby-identifier">to_decimal</span> <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_newFilter'>
+                <a name='method-i-eth_newFilter'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_newFilter</span>
+                  <span class='arguments'>(fromBlock, toBlock, address, topics)</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_newfilter">github.com/ethereum/wiki/wiki/JSON-RPC#eth_newfilter</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_newFilter-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_newFilter-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 231</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_newFilter</span>(<span class="ruby-identifier">fromBlock</span>, <span class="ruby-identifier">toBlock</span>, <span class="ruby-identifier">address</span>, <span class="ruby-identifier">topics</span>)&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;$CODE&quot;</span>,[<span class="ruby-identifier">fromBlock</span>, <span class="ruby-identifier">toBlock</span>, <span class="ruby-identifier">address</span>, <span class="ruby-identifier">topics</span>])&#x000A;  <span class="ruby-identifier">to_decimal</span> <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_newPendingTransactionFilter'>
+                <a name='method-i-eth_newPendingTransactionFilter'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_newPendingTransactionFilter</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_newpendingtransactionfilter">github.com/ethereum/wiki/wiki/JSON-RPC#eth_newpendingtransactionfilter</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_newPendingTransactionFilter-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_newPendingTransactionFilter-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 243</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_newPendingTransactionFilter</span>()&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;eth_newPendingTransactionFilter&quot;</span>)&#x000A;  <span class="ruby-identifier">to_decimal</span> <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_protocolVersion'>
+                <a name='method-i-eth_protocolVersion'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_protocolVersion</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_protocolversion">github.com/ethereum/wiki/wiki/JSON-RPC#eth_protocolversion</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_protocolVersion-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_protocolVersion-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 34</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_protocolVersion</span>()&#x000A;  <span class="ruby-identifier">raise</span> <span class="ruby-constant">NotImplementedError</span>.<span class="ruby-identifier">new</span> <span class="ruby-string">&quot;JSON-RPC call to eth_protocolVersion is not currently supported&quot;</span>&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_sendRawTransaction'>
+                <a name='method-i-eth_sendRawTransaction'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_sendRawTransaction</span>
+                  <span class='arguments'>(data)</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_sendrawtransaction">github.com/ethereum/wiki/wiki/JSON-RPC#eth_sendrawtransaction</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_sendRawTransaction-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_sendRawTransaction-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 141</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_sendRawTransaction</span>(<span class="ruby-identifier">data</span>)&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;eth_sendRawTransaction&quot;</span>,[<span class="ruby-identifier">data</span>])&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_sendTransaction'>
+                <a name='method-i-eth_sendTransaction'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_sendTransaction</span>
+                  <span class='arguments'>(trans_object)</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_sendtransaction">github.com/ethereum/wiki/wiki/JSON-RPC#eth_sendtransaction</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_sendTransaction-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_sendTransaction-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 135</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_sendTransaction</span>(<span class="ruby-identifier">trans_object</span>)&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;eth_sendTransaction&quot;</span>,[<span class="ruby-identifier">trans_object</span>])&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_sign'>
+                <a name='method-i-eth_sign'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_sign</span>
+                  <span class='arguments'>(address, data)</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_sign">github.com/ethereum/wiki/wiki/JSON-RPC#eth_sign</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_sign-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_sign-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 129</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_sign</span>(<span class="ruby-identifier">address</span>, <span class="ruby-identifier">data</span>)&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;eth_sign&quot;</span>,[<span class="ruby-identifier">address</span>, <span class="ruby-identifier">data</span>])&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_submitHashrate'>
+                <a name='method-i-eth_submitHashrate'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_submitHashrate</span>
+                  <span class='arguments'>(hashrate, id)</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_submithashrate">github.com/ethereum/wiki/wiki/JSON-RPC#eth_submithashrate</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_submitHashrate-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_submitHashrate-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 285</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_submitHashrate</span>(<span class="ruby-identifier">hashrate</span>, <span class="ruby-identifier">id</span>)&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;eth_submitHashrate&quot;</span>,[<span class="ruby-identifier">hashrate</span>, <span class="ruby-identifier">id</span>])&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_submitWork'>
+                <a name='method-i-eth_submitWork'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_submitWork</span>
+                  <span class='arguments'>(nonce, powHash, mixDigest)</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_submitwork">github.com/ethereum/wiki/wiki/JSON-RPC#eth_submitwork</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_submitWork-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_submitWork-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 279</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_submitWork</span>(<span class="ruby-identifier">nonce</span>, <span class="ruby-identifier">powHash</span>, <span class="ruby-identifier">mixDigest</span>)&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;eth_submitWork&quot;</span>,[<span class="ruby-identifier">nonce</span>, <span class="ruby-identifier">powHash</span>, <span class="ruby-identifier">mixDigest</span>])&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_syncing'>
+                <a name='method-i-eth_syncing'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_syncing</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_syncing">github.com/ethereum/wiki/wiki/JSON-RPC#eth_syncing</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_syncing-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_syncing-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 39</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_syncing</span>()&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;eth_syncing&quot;</span>)&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-eth_uninstallFilter'>
+                <a name='method-i-eth_uninstallFilter'></a>
+                <div class='synopsis'>
+                  <span class='name'>eth_uninstallFilter</span>
+                  <span class='arguments'>(id)</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_uninstallfilter">github.com/ethereum/wiki/wiki/JSON-RPC#eth_uninstallfilter</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-eth_uninstallFilter-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-eth_uninstallFilter-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 249</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">eth_uninstallFilter</span>(<span class="ruby-identifier">id</span>)&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;eth_uninstallFilter&quot;</span>,[<span class="ruby-identifier">id</span>])&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-net_listening'>
+                <a name='method-i-net_listening'></a>
+                <div class='synopsis'>
+                  <span class='name'>net_listening</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#net_listening">github.com/ethereum/wiki/wiki/JSON-RPC#net_listening</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-net_listening-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-net_listening-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 28</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">net_listening</span>()&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;net_listening&quot;</span>)&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-net_peerCount'>
+                <a name='method-i-net_peerCount'></a>
+                <div class='synopsis'>
+                  <span class='name'>net_peerCount</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#net_peercount">github.com/ethereum/wiki/wiki/JSON-RPC#net_peercount</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-net_peerCount-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-net_peerCount-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 22</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">net_peerCount</span>()&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;net_peerCount&quot;</span>)&#x000A;  <span class="ruby-identifier">to_decimal</span> <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-net_version'>
+                <a name='method-i-net_version'></a>
+                <div class='synopsis'>
+                  <span class='name'>net_version</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#net_version">github.com/ethereum/wiki/wiki/JSON-RPC#net_version</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-net_version-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-net_version-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 16</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">net_version</span>()&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;net_version&quot;</span>)&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-shh_addToGroup'>
+                <a name='method-i-shh_addToGroup'></a>
+                <div class='synopsis'>
+                  <span class='name'>shh_addToGroup</span>
+                  <span class='arguments'>(address)</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#shh_addtogroup">github.com/ethereum/wiki/wiki/JSON-RPC#shh_addtogroup</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-shh_addToGroup-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-shh_addToGroup-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 321</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">shh_addToGroup</span>(<span class="ruby-identifier">address</span>)&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;shh_addToGroup&quot;</span>,[<span class="ruby-identifier">address</span>])&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-shh_getFilterChanges'>
+                <a name='method-i-shh_getFilterChanges'></a>
+                <div class='synopsis'>
+                  <span class='name'>shh_getFilterChanges</span>
+                  <span class='arguments'>(id)</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#shh_getfilterchanges">github.com/ethereum/wiki/wiki/JSON-RPC#shh_getfilterchanges</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-shh_getFilterChanges-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-shh_getFilterChanges-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 339</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">shh_getFilterChanges</span>(<span class="ruby-identifier">id</span>)&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;shh_getFilterChanges&quot;</span>,[<span class="ruby-identifier">id</span>])&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-shh_getMessages'>
+                <a name='method-i-shh_getMessages'></a>
+                <div class='synopsis'>
+                  <span class='name'>shh_getMessages</span>
+                  <span class='arguments'>(id)</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#shh_getmessages">github.com/ethereum/wiki/wiki/JSON-RPC#shh_getmessages</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-shh_getMessages-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-shh_getMessages-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 345</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">shh_getMessages</span>(<span class="ruby-identifier">id</span>)&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;shh_getMessages&quot;</span>,[<span class="ruby-identifier">id</span>])&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-shh_hasIdentity'>
+                <a name='method-i-shh_hasIdentity'></a>
+                <div class='synopsis'>
+                  <span class='name'>shh_hasIdentity</span>
+                  <span class='arguments'>(address)</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#shh_hasidentity">github.com/ethereum/wiki/wiki/JSON-RPC#shh_hasidentity</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-shh_hasIdentity-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-shh_hasIdentity-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 309</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">shh_hasIdentity</span>(<span class="ruby-identifier">address</span>)&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;shh_hasIdentity&quot;</span>,[<span class="ruby-identifier">address</span>])&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-shh_newFilter'>
+                <a name='method-i-shh_newFilter'></a>
+                <div class='synopsis'>
+                  <span class='name'>shh_newFilter</span>
+                  <span class='arguments'>(filter_object)</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#shh_newfilter">github.com/ethereum/wiki/wiki/JSON-RPC#shh_newfilter</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-shh_newFilter-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-shh_newFilter-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 327</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">shh_newFilter</span>(<span class="ruby-identifier">filter_object</span>)&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;shh_newFilter&quot;</span>,[<span class="ruby-identifier">filter_object</span>])&#x000A;  <span class="ruby-identifier">to_decimal</span> <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-shh_newGroup'>
+                <a name='method-i-shh_newGroup'></a>
+                <div class='synopsis'>
+                  <span class='name'>shh_newGroup</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#shh_newgroup">github.com/ethereum/wiki/wiki/JSON-RPC#shh_newgroup</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-shh_newGroup-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-shh_newGroup-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 315</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">shh_newGroup</span>()&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;shh_newGroup&quot;</span>)&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-shh_newIdentity'>
+                <a name='method-i-shh_newIdentity'></a>
+                <div class='synopsis'>
+                  <span class='name'>shh_newIdentity</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#shh_newidentity">github.com/ethereum/wiki/wiki/JSON-RPC#shh_newidentity</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-shh_newIdentity-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-shh_newIdentity-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 303</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">shh_newIdentity</span>()&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;shh_newIdentity&quot;</span>)&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-shh_post'>
+                <a name='method-i-shh_post'></a>
+                <div class='synopsis'>
+                  <span class='name'>shh_post</span>
+                  <span class='arguments'>(post_object)</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#shh_post">github.com/ethereum/wiki/wiki/JSON-RPC#shh_post</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-shh_post-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-shh_post-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 297</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">shh_post</span>(<span class="ruby-identifier">post_object</span>)&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;shh_post&quot;</span>,[<span class="ruby-identifier">post_object</span>])&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-shh_uninstallFilter'>
+                <a name='method-i-shh_uninstallFilter'></a>
+                <div class='synopsis'>
+                  <span class='name'>shh_uninstallFilter</span>
+                  <span class='arguments'>(id)</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#shh_uninstallfilter">github.com/ethereum/wiki/wiki/JSON-RPC#shh_uninstallfilter</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-shh_uninstallFilter-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-shh_uninstallFilter-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 333</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">shh_uninstallFilter</span>(<span class="ruby-identifier">id</span>)&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;shh_uninstallFilter&quot;</span>,[<span class="ruby-identifier">id</span>])&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-shh_version'>
+                <a name='method-i-shh_version'></a>
+                <div class='synopsis'>
+                  <span class='name'>shh_version</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#shh_version">github.com/ethereum/wiki/wiki/JSON-RPC#shh_version</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-shh_version-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-shh_version-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 291</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">shh_version</span>()&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;shh_version&quot;</span>)&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-web3_clientVersion'>
+                <a name='method-i-web3_clientVersion'></a>
+                <div class='synopsis'>
+                  <span class='name'>web3_clientVersion</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#web3_clientversion">github.com/ethereum/wiki/wiki/JSON-RPC#web3_clientversion</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-web3_clientVersion-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-web3_clientVersion-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 4</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">web3_clientVersion</span>()&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;web3_clientVersion&quot;</span>)&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-method-i-web3_sha3'>
+                <a name='method-i-web3_sha3'></a>
+                <div class='synopsis'>
+                  <span class='name'>web3_sha3</span>
+                  <span class='arguments'>(data)</span>
+                </div>
+                <div class='description'>
+                  
+                  <p>See <a
+                  href="https://github.com/ethereum/wiki/wiki/JSON-RPC#web3_sha3">github.com/ethereum/wiki/wiki/JSON-RPC#web3_sha3</a></p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('method-i-web3_sha3-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='method-i-web3_sha3-source'><span class="ruby-comment"># File generated_web3_methods.rb, line 10</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">web3_sha3</span>(<span class="ruby-identifier">data</span>)&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;web3_sha3&quot;</span>,[<span class="ruby-identifier">data</span>])&#x000A;  <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id='footer-push'></div>
+    </div>
+    <div id='footer'>
+      <a href="https://github.com/rdoc/hanna-nouveau"><strong>Hanna Nouveau</strong> RDoc template</a>
+    </div>
+  </body>
+</html>
