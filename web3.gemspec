@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.homepage    = 'https://github.com/spikewilliams/vtada-ethereum'
   s.license       = 'MIT'
 
-  s.add_development_dependency "hanna-nouveau", '=> 1.0.1'
-  s.add_runtime_dependency "httparty", '=> 0.14.0'
-  s.add_runtime_dependency "json", '>= 1.4'
+  s.add_development_dependency "hanna-nouveau", '~> 1.0'
+  s.add_runtime_dependency "httparty", '~> 0.14'
+  s.add_runtime_dependency "json", '~> 2'
 end
