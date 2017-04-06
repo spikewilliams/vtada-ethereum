@@ -39,7 +39,7 @@ class Web3
     end
 
     if !response.success?
-      raise "JSON-RPC endpoint " + @endpoint + " returned http code " + response.code
+      raise "JSON-RPC endpoint " + @endpoint + " returned http code " + response.code.to_s()
     end
 
     if response["error"]
