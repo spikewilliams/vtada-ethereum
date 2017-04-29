@@ -1,7 +1,9 @@
 # vdata-ethereum
 Ruby library for accessing the Ethereum blockchain via JSON RPC
 
+# Docs 
 
+Docs can be found at http://www.rubydoc.info/gems/web3/0.2.2/Web3
 
 # Configuration
 Use environment variables to configure the vdata-ethereum client.
