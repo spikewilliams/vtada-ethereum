@@ -81,7 +81,7 @@ class Web3
   end
 
   def ether_to_wei(ether)
-    ether * 10**18
+    (ether * 10**18).round()
   end
 
 end
