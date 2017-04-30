@@ -76,12 +76,37 @@ class Web3
     decimal.to_s(16)
   end
 
+  def to_0x(decimal)
+    "0x" + to_hex(decimal)
+  end
+
   def wei_to_ether(wei)
     1.0 * wei / 10**18
   end
 
   def ether_to_wei(ether)
     (ether * 10**18).round()
+  end
+
+  def ether_to_0xwei(ether)
+    to_0x(ether_to_wei(ether))
+  end
+
+  # Convenience function to simply send ether from one account to another, using
+  # the default gas settings.
+  # This requires the personal api to be active. See https://github.com/ethereum/go-ethereum/wiki/Management-APIs
+  def sendEther(from_address, to_address, ether, password)
+    trans = {}
+    trans["from"] = from_address
+    trans["to"] = to_address
+    trans["value"] = ether_to_0xwei(ether)
+#    if gas != nil
+#        trans["gas"] = to_hex(gas) #should this to_hex or to_0x?
+#    end
+#    if gasPrice != nil
+#      trans["gasPrice"] = to_hex(gasPrice)
+#    end
+    personal_signAndSendTransaction(trans, password)
   end
 
 end

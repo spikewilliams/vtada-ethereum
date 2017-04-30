@@ -1,5 +1,5 @@
 #!/bin/sh
 
 cd ../lib
-rdoc --output ../doc -f hanna
+rdoc --output ../docs -f hanna
 cd ../bin

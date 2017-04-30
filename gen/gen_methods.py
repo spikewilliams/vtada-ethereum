@@ -19,7 +19,19 @@ patterns = {-1:"""
     end"""
 }
 
+comments = {"personal_unlockAccount": """
+    # For web3 personal api
+    # Be careful with this method. Do not leave an account unlocked, as that creates
+    # an opportunity for an attacker to make transactions from that account. In general
+    # personal_signAndSendTransaction is a better option than unlock -> send -> lock"""}
+
+
 def buildComment(name):
+    if name in comments:
+        return comments[name]
+
+    if name.startswith("personal_"):
+        return "# For web3 personal api - not activated by default in geth"
     return("# See https://github.com/ethereum/wiki/wiki/JSON-RPC#%s" % (name.lower()))
 
 print("module GeneratedWeb3Methods")

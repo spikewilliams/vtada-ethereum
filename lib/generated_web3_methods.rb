@@ -346,4 +346,44 @@ module GeneratedWeb3Methods
       response = do_request("shh_getMessages",[id])
       response["result"]
     end
+
+    # For web3 personal api - not activated by default in geth
+    def personal_listAccounts()
+      response = do_request("personal_listAccounts")
+      response["result"]
+    end
+
+    # For web3 personal api - not activated by default in geth
+    def personal_importRawKey(key, passphrase)
+      response = do_request("personal_importRawKey",[key, passphrase])
+      response["result"]
+    end
+
+    # For web3 personal api - not activated by default in geth
+    def personal_newAccount(password)
+      response = do_request("personal_newAccount",[password])
+      response["result"]
+    end
+
+    # For web3 personal api - not activated by default in geth
+    def personal_signAndSendTransaction(transaction, passphrase)
+      response = do_request("personal_signAndSendTransaction",[transaction, passphrase])
+      response["result"]
+    end
+
+    # For web3 personal api - not activated by default in geth
+    def personal_lockAccount(account)
+      response = do_request("personal_lockAccount",[account])
+      response["result"]
+    end
+
+    
+    # For web3 personal api
+    # Be careful with this method. Do not leave an account unlocked, as that creates
+    # an opportunity for an attacker to make transactions from that account. In general
+    # personal_signAndSendTransaction is a better option than unlock -> send -> lock
+    def personal_unlockAccount(account, passphrase, duration)
+      response = do_request("personal_unlockAccount",[account, passphrase, duration])
+      response["result"]
+    end
 end

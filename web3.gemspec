@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'web3'
-  s.version     = '0.2.3'
-  s.date        = '2017-04-29'
+  s.version     = '0.3.0'
+  s.date        = '2017-04-30'
   s.summary     = "A client library for connecting to an Ethereum Web3 JSON RPC service"
   s.description = s.summary
   s.authors     = ["Spike Williams"]
