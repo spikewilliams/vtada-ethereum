@@ -28,7 +28,28 @@ Web3
 </h1>
 <ol class='paths'>
 <li>
+<a href="../files/eth_calls_rb.html">eth_calls.rb</a>
+</li>
+<li class='other'>
+<a href="../files/net_calls_rb.html">net_calls.rb</a>
+</li>
+<li class='other'>
+<a href="../files/personal_calls_rb.html">personal_calls.rb</a>
+</li>
+<li class='other'>
+<a href="../files/shh_calls_rb.html">shh_calls.rb</a>
+</li>
+<li class='other'>
+<a href="../files/txpool_calls_rb.html">txpool_calls.rb</a>
+</li>
+<li class='other'>
 <a href="../files/web3_rb.html">web3.rb</a>
+</li>
+<li class='other'>
+<a href="../files/web3_calls_rb.html">web3_calls.rb</a>
+</li>
+<li>
+<a class='show' href='#' onclick='this.parentNode.parentNode.className += &quot; expanded&quot;; this.parentNode.removeChild(this); return false'>show all</a>
 </li>
 </ol>
 <div class='parent'>
@@ -65,9 +86,25 @@ Superclass:
 <div id='includes'>
 <h2>Included modules</h2>
 <ol>
-<li><a href="GeneratedWeb3Methods.html">GeneratedWeb3Methods</a></li>
+<li><a href="Web3/Web3Calls.html">Web3::Web3Calls</a></li>
+<li><a href="Web3/NetCalls.html">Web3::NetCalls</a></li>
+<li><a href="Web3/EthCalls.html">Web3::EthCalls</a></li>
+<li><a href="Web3/ShhCalls.html">Web3::ShhCalls</a></li>
+<li><a href="Web3/PersonalCalls.html">Web3::PersonalCalls</a></li>
+<li><a href="Web3/TxpoolCalls.html">Web3::TxpoolCalls</a></li>
 </ol>
 </div>
+</div>
+<div id='class-list'>
+<h2>Classes and Modules</h2>
+<ol>
+<li><a href="Web3/EthCalls.html">Web3::EthCalls</a></li>
+<li><a href="Web3/NetCalls.html">Web3::NetCalls</a></li>
+<li><a href="Web3/PersonalCalls.html">Web3::PersonalCalls</a></li>
+<li><a href="Web3/ShhCalls.html">Web3::ShhCalls</a></li>
+<li><a href="Web3/TxpoolCalls.html">Web3::TxpoolCalls</a></li>
+<li><a href="Web3/Web3Calls.html">Web3::Web3Calls</a></li>
+</ol>
 </div>
 <div id='section'>
 <div id='attribute-list'>
@@ -116,12 +153,16 @@ Superclass:
 </div>
 <div class='description'>
 
+<p>the default endpoint is <a target="_top" href="http://localhost:8545">localhost:8545</a>
+and default client id is 999 these can be set as envioronment variables -
+ETH_ENDPOINT and ETH_DEFAULT_CLIENT_ID</p>
+
 </div>
 <div class='source'>
 <a class='source-toggle' href='#' onclick='toggleCode(&#39;method-c-new-source&#39;); return false'>
 [show source]
 </a>
-<pre id='method-c-new-source'><span class="ruby-comment"># File web3.rb, line 12</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>( <span class="ruby-identifier">endpoint</span> = <span class="ruby-constant">ENV</span>[<span class="ruby-string">&quot;ETH_ENDPOINT&quot;</span>] <span class="ruby-operator">||</span> <span class="ruby-string">&quot;http://localhost:8545&quot;</span>,&#x000A;                <span class="ruby-identifier">id</span> = <span class="ruby-constant">ENV</span>[<span class="ruby-string">&quot;ETH_DEFAULT_CLIENT_ID&quot;</span>] <span class="ruby-operator">||</span> <span class="ruby-value">999</span>)&#x000A;  <span class="ruby-ivar">@endpoint</span> = <span class="ruby-identifier">endpoint</span>&#x000A;  <span class="ruby-ivar">@id</span> = <span class="ruby-identifier">id</span>&#x000A;<span class="ruby-keyword">end</span></pre>
+<pre id='method-c-new-source'><span class="ruby-comment"># File web3.rb, line 14</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>( <span class="ruby-identifier">endpoint</span> = <span class="ruby-constant">ENV</span>[<span class="ruby-string">&quot;ETH_ENDPOINT&quot;</span>] <span class="ruby-operator">||</span> <span class="ruby-string">&quot;http://localhost:8545&quot;</span>,&#x000A;                <span class="ruby-identifier">id</span> = <span class="ruby-constant">ENV</span>[<span class="ruby-string">&quot;ETH_DEFAULT_CLIENT_ID&quot;</span>] <span class="ruby-operator">||</span> <span class="ruby-value">999</span>)&#x000A;  <span class="ruby-ivar">@endpoint</span> = <span class="ruby-identifier">endpoint</span>&#x000A;  <span class="ruby-ivar">@id</span> = <span class="ruby-identifier">id</span>&#x000A;<span class="ruby-keyword">end</span></pre>
 </div>
 </div>
 <h2>Public Instance methods</h2>
@@ -134,12 +175,15 @@ Superclass:
 </div>
 <div class='description'>
 
+<p>this is the method responsible for communicating with the endpoint it gets
+called by all the action-specific methods</p>
+
 </div>
 <div class='source'>
 <a class='source-toggle' href='#' onclick='toggleCode(&#39;method-i-do_request-source&#39;); return false'>
 [show source]
 </a>
-<pre id='method-i-do_request-source'><span class="ruby-comment"># File web3.rb, line 18</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">do_request</span>(<span class="ruby-identifier">method</span>, <span class="ruby-identifier">params</span> = [], <span class="ruby-identifier">id</span> = <span class="ruby-ivar">@id</span>) <span class="ruby-comment">#TODO: More error handling</span>&#x000A;  <span class="ruby-identifier">request_json</span> = { <span class="ruby-value">:jsonrpc</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">@@jsonrpc</span>,&#x000A;             <span class="ruby-value">:method</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">method</span>,&#x000A;             <span class="ruby-value">:params</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>,&#x000A;             <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@id</span>&#x000A;           }.<span class="ruby-identifier">to_json</span>&#x000A;&#x000A;  <span class="ruby-keyword">if</span> <span class="ruby-identifier">@@debug</span>&#x000A;    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Request to &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@endpoint</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;: &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">request_json</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;  ....&quot;</span>&#x000A;  <span class="ruby-keyword">end</span>&#x000A;&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-constant">HTTParty</span>.<span class="ruby-identifier">post</span>(<span class="ruby-ivar">@endpoint</span>,&#x000A;      <span class="ruby-value">:body</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">request_json</span>,&#x000A;      <span class="ruby-value">:headers</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-string">&#39;Content-Type&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;application/json&#39;</span> } )&#x000A;&#x000A;  <span class="ruby-keyword">if</span> <span class="ruby-identifier">@@debug</span>&#x000A;    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Response: &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">response</span>.<span class="ruby-identifier">to_s</span>()&#x000A;  <span class="ruby-keyword">end</span>&#x000A;&#x000A;  <span class="ruby-keyword">if</span> <span class="ruby-identifier">response</span>.<span class="ruby-identifier">bad_gateway?</span>&#x000A;    <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;Unable to connect to JSON-RPC endpont&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@endpoint</span>&#x000A;  <span class="ruby-keyword">end</span>&#x000A;&#x000A;  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">response</span>.<span class="ruby-identifier">success?</span>&#x000A;    <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;JSON-RPC endpoint &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@endpoint</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot; returned http code &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">response</span>.<span class="ruby-identifier">code</span>.<span class="ruby-identifier">to_s</span>()&#x000A;  <span class="ruby-keyword">end</span>&#x000A;&#x000A;  <span class="ruby-keyword">if</span> <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;error&quot;</span>]&#x000A;    <span class="ruby-identifier">code</span> = <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;error&quot;</span>][<span class="ruby-string">&quot;code&quot;</span>]&#x000A;    <span class="ruby-identifier">message</span> = <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;error&quot;</span>][<span class="ruby-string">&quot;message&quot;</span>]&#x000A;    <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;In response to &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">method</span> <span class="ruby-operator">+</span> <span class="ruby-node">&quot; request, JSON-RPC endpoint returned error #&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">code</span>.<span class="ruby-identifier">to_s</span>() <span class="ruby-operator">+</span> <span class="ruby-string">&quot;: &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">message</span>&#x000A;  <span class="ruby-keyword">end</span>&#x000A;  <span class="ruby-identifier">response</span>&#x000A;<span class="ruby-keyword">end</span></pre>
+<pre id='method-i-do_request-source'><span class="ruby-comment"># File web3.rb, line 22</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">do_request</span>(<span class="ruby-identifier">method</span>, <span class="ruby-identifier">params</span> = [], <span class="ruby-identifier">id</span> = <span class="ruby-ivar">@id</span>)&#x000A;  <span class="ruby-identifier">request_json</span> = { <span class="ruby-value">:jsonrpc</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">@@jsonrpc</span>,&#x000A;             <span class="ruby-value">:method</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">method</span>,&#x000A;             <span class="ruby-value">:params</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>,&#x000A;             <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@id</span>&#x000A;           }.<span class="ruby-identifier">to_json</span>&#x000A;&#x000A;  <span class="ruby-keyword">if</span> <span class="ruby-identifier">@@debug</span>&#x000A;    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Request to &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@endpoint</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;: &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">request_json</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;  ....&quot;</span>&#x000A;  <span class="ruby-keyword">end</span>&#x000A;&#x000A;  <span class="ruby-identifier">response</span> = <span class="ruby-constant">HTTParty</span>.<span class="ruby-identifier">post</span>(<span class="ruby-ivar">@endpoint</span>,&#x000A;      <span class="ruby-value">:body</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">request_json</span>,&#x000A;      <span class="ruby-value">:headers</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-string">&#39;Content-Type&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;application/json&#39;</span> } )&#x000A;&#x000A;  <span class="ruby-keyword">if</span> <span class="ruby-identifier">@@debug</span>&#x000A;    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Response: &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">response</span>.<span class="ruby-identifier">to_s</span>()&#x000A;  <span class="ruby-keyword">end</span>&#x000A;&#x000A;  <span class="ruby-keyword">if</span> <span class="ruby-identifier">response</span>.<span class="ruby-identifier">bad_gateway?</span>&#x000A;    <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;Unable to connect to JSON-RPC endpont&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@endpoint</span>&#x000A;  <span class="ruby-keyword">end</span>&#x000A;&#x000A;  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">response</span>.<span class="ruby-identifier">success?</span>&#x000A;    <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;JSON-RPC endpoint &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@endpoint</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot; returned http code &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">response</span>.<span class="ruby-identifier">code</span>.<span class="ruby-identifier">to_s</span>()&#x000A;  <span class="ruby-keyword">end</span>&#x000A;&#x000A;  <span class="ruby-keyword">if</span> <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;error&quot;</span>]&#x000A;    <span class="ruby-identifier">code</span> = <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;error&quot;</span>][<span class="ruby-string">&quot;code&quot;</span>]&#x000A;    <span class="ruby-identifier">message</span> = <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;error&quot;</span>][<span class="ruby-string">&quot;message&quot;</span>]&#x000A;    <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;In response to &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">method</span> <span class="ruby-operator">+</span> <span class="ruby-node">&quot; request, JSON-RPC endpoint returned error #&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">code</span>.<span class="ruby-identifier">to_s</span>() <span class="ruby-operator">+</span> <span class="ruby-string">&quot;: &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">message</span>&#x000A;  <span class="ruby-keyword">end</span>&#x000A;  <span class="ruby-identifier">response</span>&#x000A;<span class="ruby-keyword">end</span></pre>
 </div>
 </div>
 <div class='method public-instance' id='method-method-i-ether_to_0xwei'>
@@ -151,12 +195,14 @@ Superclass:
 </div>
 <div class='description'>
 
+<p>Converts either to wei a hex-formatted string, including the 0x indicator</p>
+
 </div>
 <div class='source'>
 <a class='source-toggle' href='#' onclick='toggleCode(&#39;method-i-ether_to_0xwei-source&#39;); return false'>
 [show source]
 </a>
-<pre id='method-i-ether_to_0xwei-source'><span class="ruby-comment"># File web3.rb, line 91</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">ether_to_0xwei</span>(<span class="ruby-identifier">ether</span>)&#x000A;  <span class="ruby-identifier">to_0x</span>(<span class="ruby-identifier">ether_to_wei</span>(<span class="ruby-identifier">ether</span>))&#x000A;<span class="ruby-keyword">end</span></pre>
+<pre id='method-i-ether_to_0xwei-source'><span class="ruby-comment"># File web3.rb, line 121</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">ether_to_0xwei</span>(<span class="ruby-identifier">ether</span>)&#x000A;  <span class="ruby-identifier">to_0x</span>(<span class="ruby-identifier">ether_to_wei</span>(<span class="ruby-identifier">ether</span>))&#x000A;<span class="ruby-keyword">end</span></pre>
 </div>
 </div>
 <div class='method public-instance' id='method-method-i-ether_to_wei'>
@@ -168,12 +214,14 @@ Superclass:
 </div>
 <div class='description'>
 
+<p>Converts either to wei</p>
+
 </div>
 <div class='source'>
 <a class='source-toggle' href='#' onclick='toggleCode(&#39;method-i-ether_to_wei-source&#39;); return false'>
 [show source]
 </a>
-<pre id='method-i-ether_to_wei-source'><span class="ruby-comment"># File web3.rb, line 87</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">ether_to_wei</span>(<span class="ruby-identifier">ether</span>)&#x000A;  (<span class="ruby-identifier">ether</span> <span class="ruby-operator">*</span> <span class="ruby-value">10</span><span class="ruby-operator">**</span><span class="ruby-value">18</span>).<span class="ruby-identifier">round</span>()&#x000A;<span class="ruby-keyword">end</span></pre>
+<pre id='method-i-ether_to_wei-source'><span class="ruby-comment"># File web3.rb, line 116</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">ether_to_wei</span>(<span class="ruby-identifier">ether</span>)&#x000A;  (<span class="ruby-identifier">ether</span> <span class="ruby-operator">*</span> <span class="ruby-value">10</span><span class="ruby-operator">**</span><span class="ruby-value">18</span>).<span class="ruby-identifier">round</span>()&#x000A;<span class="ruby-keyword">end</span></pre>
 </div>
 </div>
 <div class='method public-instance' id='method-method-i-sendEther'>
@@ -195,7 +243,7 @@ href="https://github.com/ethereum/go-ethereum/wiki/Management-APIs">github.com/e
 <a class='source-toggle' href='#' onclick='toggleCode(&#39;method-i-sendEther-source&#39;); return false'>
 [show source]
 </a>
-<pre id='method-i-sendEther-source'><span class="ruby-comment"># File web3.rb, line 98</span>&#x000A;  <span class="ruby-keyword">def</span> <span class="ruby-identifier">sendEther</span>(<span class="ruby-identifier">from_address</span>, <span class="ruby-identifier">to_address</span>, <span class="ruby-identifier">ether</span>, <span class="ruby-identifier">password</span>)&#x000A;    <span class="ruby-identifier">trans</span> = {}&#x000A;    <span class="ruby-identifier">trans</span>[<span class="ruby-string">&quot;from&quot;</span>] = <span class="ruby-identifier">from_address</span>&#x000A;    <span class="ruby-identifier">trans</span>[<span class="ruby-string">&quot;to&quot;</span>] = <span class="ruby-identifier">to_address</span>&#x000A;    <span class="ruby-identifier">trans</span>[<span class="ruby-string">&quot;value&quot;</span>] = <span class="ruby-identifier">ether_to_0xwei</span>(<span class="ruby-identifier">ether</span>)&#x000A;<span class="ruby-comment">#    if gas != nil</span>&#x000A;<span class="ruby-comment">#        trans[&quot;gas&quot;] = to_hex(gas) #should this to_hex or to_0x?</span>&#x000A;<span class="ruby-comment">#    end</span>&#x000A;<span class="ruby-comment">#    if gasPrice != nil</span>&#x000A;<span class="ruby-comment">#      trans[&quot;gasPrice&quot;] = to_hex(gasPrice)</span>&#x000A;<span class="ruby-comment">#    end</span>&#x000A;    <span class="ruby-identifier">personal_signAndSendTransaction</span>(<span class="ruby-identifier">trans</span>, <span class="ruby-identifier">password</span>)&#x000A;  <span class="ruby-keyword">end</span></pre>
+<pre id='method-i-sendEther-source'><span class="ruby-comment"># File web3.rb, line 128</span>&#x000A;  <span class="ruby-keyword">def</span> <span class="ruby-identifier">sendEther</span>(<span class="ruby-identifier">from_address</span>, <span class="ruby-identifier">to_address</span>, <span class="ruby-identifier">ether</span>, <span class="ruby-identifier">password</span>)&#x000A;    <span class="ruby-identifier">trans</span> = {}&#x000A;    <span class="ruby-identifier">trans</span>[<span class="ruby-string">&quot;from&quot;</span>] = <span class="ruby-identifier">from_address</span>&#x000A;    <span class="ruby-identifier">trans</span>[<span class="ruby-string">&quot;to&quot;</span>] = <span class="ruby-identifier">to_address</span>&#x000A;    <span class="ruby-identifier">trans</span>[<span class="ruby-string">&quot;value&quot;</span>] = <span class="ruby-identifier">ether_to_0xwei</span>(<span class="ruby-identifier">ether</span>)&#x000A;<span class="ruby-comment">#    if gas != nil</span>&#x000A;<span class="ruby-comment">#        trans[&quot;gas&quot;] = to_hex(gas) #should this to_hex or to_0x?</span>&#x000A;<span class="ruby-comment">#    end</span>&#x000A;<span class="ruby-comment">#    if gasPrice != nil</span>&#x000A;<span class="ruby-comment">#      trans[&quot;gasPrice&quot;] = to_hex(gasPrice)</span>&#x000A;<span class="ruby-comment">#    end</span>&#x000A;    <span class="ruby-identifier">personal_signAndSendTransaction</span>(<span class="ruby-identifier">trans</span>, <span class="ruby-identifier">password</span>)&#x000A;  <span class="ruby-keyword">end</span></pre>
 </div>
 </div>
 <div class='method public-instance' id='method-method-i-to_0x'>
@@ -207,12 +255,14 @@ href="https://github.com/ethereum/go-ethereum/wiki/Management-APIs">github.com/e
 </div>
 <div class='description'>
 
+<p>Converts a decimal integer to a hex string that starts with a 0x marker</p>
+
 </div>
 <div class='source'>
 <a class='source-toggle' href='#' onclick='toggleCode(&#39;method-i-to_0x-source&#39;); return false'>
 [show source]
 </a>
-<pre id='method-i-to_0x-source'><span class="ruby-comment"># File web3.rb, line 79</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_0x</span>(<span class="ruby-identifier">decimal</span>)&#x000A;  <span class="ruby-string">&quot;0x&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">to_hex</span>(<span class="ruby-identifier">decimal</span>)&#x000A;<span class="ruby-keyword">end</span></pre>
+<pre id='method-i-to_0x-source'><span class="ruby-comment"># File web3.rb, line 106</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_0x</span>(<span class="ruby-identifier">decimal</span>)&#x000A;  <span class="ruby-string">&quot;0x&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">to_hex</span>(<span class="ruby-identifier">decimal</span>)&#x000A;<span class="ruby-keyword">end</span></pre>
 </div>
 </div>
 <div class='method public-instance' id='method-method-i-to_decimal'>
@@ -224,14 +274,14 @@ href="https://github.com/ethereum/go-ethereum/wiki/Management-APIs">github.com/e
 </div>
 <div class='description'>
 
-<p>Utility methods</p>
+<p>Converts a hex string or int to a decimal integer</p>
 
 </div>
 <div class='source'>
 <a class='source-toggle' href='#' onclick='toggleCode(&#39;method-i-to_decimal-source&#39;); return false'>
 [show source]
 </a>
-<pre id='method-i-to_decimal-source'><span class="ruby-comment"># File web3.rb, line 59</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_decimal</span>(<span class="ruby-identifier">hex</span>)&#x000A;  <span class="ruby-keyword">if</span> <span class="ruby-identifier">hex</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>&#x000A;    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>&#x000A;  <span class="ruby-keyword">end</span>&#x000A;  <span class="ruby-keyword">if</span> <span class="ruby-identifier">hex</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Integer</span>)&#x000A;    <span class="ruby-keyword">return</span> <span class="ruby-identifier">hex</span>&#x000A;  <span class="ruby-keyword">end</span>&#x000A;  <span class="ruby-identifier">hex</span>.<span class="ruby-identifier">to_i</span>(<span class="ruby-value">16</span>)&#x000A;<span class="ruby-keyword">end</span></pre>
+<pre id='method-i-to_decimal-source'><span class="ruby-comment"># File web3.rb, line 83</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_decimal</span>(<span class="ruby-identifier">hex</span>)&#x000A;  <span class="ruby-keyword">if</span> <span class="ruby-identifier">hex</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>&#x000A;    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>&#x000A;  <span class="ruby-keyword">end</span>&#x000A;  <span class="ruby-keyword">if</span> <span class="ruby-identifier">hex</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Integer</span>)&#x000A;    <span class="ruby-keyword">return</span> <span class="ruby-identifier">hex</span>&#x000A;  <span class="ruby-keyword">end</span>&#x000A;  <span class="ruby-identifier">hex</span>.<span class="ruby-identifier">to_i</span>(<span class="ruby-value">16</span>)&#x000A;<span class="ruby-keyword">end</span></pre>
 </div>
 </div>
 <div class='method public-instance' id='method-method-i-to_hex'>
@@ -243,12 +293,14 @@ href="https://github.com/ethereum/go-ethereum/wiki/Management-APIs">github.com/e
 </div>
 <div class='description'>
 
+<p>Converts a decimal integer to a hex string</p>
+
 </div>
 <div class='source'>
 <a class='source-toggle' href='#' onclick='toggleCode(&#39;method-i-to_hex-source&#39;); return false'>
 [show source]
 </a>
-<pre id='method-i-to_hex-source'><span class="ruby-comment"># File web3.rb, line 69</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_hex</span>(<span class="ruby-identifier">decimal</span>)&#x000A;  <span class="ruby-keyword">if</span> <span class="ruby-identifier">decimal</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>&#x000A;    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>&#x000A;  <span class="ruby-keyword">end</span>&#x000A;  <span class="ruby-keyword">if</span> <span class="ruby-identifier">decimal</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>)&#x000A;    <span class="ruby-keyword">return</span> <span class="ruby-identifier">decimal</span>&#x000A;  <span class="ruby-keyword">end</span>&#x000A;  <span class="ruby-identifier">decimal</span>.<span class="ruby-identifier">to_s</span>(<span class="ruby-value">16</span>)&#x000A;<span class="ruby-keyword">end</span></pre>
+<pre id='method-i-to_hex-source'><span class="ruby-comment"># File web3.rb, line 94</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_hex</span>(<span class="ruby-identifier">decimal</span>)&#x000A;  <span class="ruby-keyword">if</span> <span class="ruby-identifier">decimal</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>&#x000A;    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>&#x000A;  <span class="ruby-keyword">end</span>&#x000A;  <span class="ruby-keyword">if</span> <span class="ruby-identifier">decimal</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>)&#x000A;    <span class="ruby-keyword">return</span> <span class="ruby-identifier">decimal</span>&#x000A;  <span class="ruby-keyword">end</span>&#x000A;  <span class="ruby-identifier">decimal</span>.<span class="ruby-identifier">to_s</span>(<span class="ruby-value">16</span>) <span class="ruby-comment">#this will throw an error if a non-integer is used</span>&#x000A;<span class="ruby-keyword">end</span></pre>
 </div>
 </div>
 <div class='method public-instance' id='method-method-i-wei_to_ether'>
@@ -260,12 +312,14 @@ href="https://github.com/ethereum/go-ethereum/wiki/Management-APIs">github.com/e
 </div>
 <div class='description'>
 
+<p>Converts wei to ether</p>
+
 </div>
 <div class='source'>
 <a class='source-toggle' href='#' onclick='toggleCode(&#39;method-i-wei_to_ether-source&#39;); return false'>
 [show source]
 </a>
-<pre id='method-i-wei_to_ether-source'><span class="ruby-comment"># File web3.rb, line 83</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">wei_to_ether</span>(<span class="ruby-identifier">wei</span>)&#x000A;  <span class="ruby-value">1.0</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">wei</span> <span class="ruby-operator">/</span> <span class="ruby-value">10</span><span class="ruby-operator">**</span><span class="ruby-value">18</span>&#x000A;<span class="ruby-keyword">end</span></pre>
+<pre id='method-i-wei_to_ether-source'><span class="ruby-comment"># File web3.rb, line 111</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">wei_to_ether</span>(<span class="ruby-identifier">wei</span>)&#x000A;  <span class="ruby-value">1.0</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">wei</span> <span class="ruby-operator">/</span> <span class="ruby-value">10</span><span class="ruby-operator">**</span><span class="ruby-value">18</span>&#x000A;<span class="ruby-keyword">end</span></pre>
 </div>
 </div>
 </div>

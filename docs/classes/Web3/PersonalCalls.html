@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang='en'>
+<head>
+<title>Web3::PersonalCalls</title>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+<link href='../../css/style.css' media='screen' rel='stylesheet' type='text/css'>
+<script type='text/javascript'>
+  function popupCode(url) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+  
+  function toggleCode(id) {
+    var code = document.getElementById(id)
+  
+    code.style.display = code.style.display != 'block' ? 'block' : 'none'
+    return true
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln('<' + 'style type="text/css">.method .source pre { display: none }<\/style>')
+</script>
+</head>
+<body class='page'>
+<div class='class' id='wrapper'>
+<div class='header'>
+<h1 class='name'><span class='type'>module</span>
+Web3::PersonalCalls
+</h1>
+<ol class='paths'>
+<li>
+<a href="../../files/personal_calls_rb.html">personal_calls.rb</a>
+</li>
+</ol>
+</div>
+<div id='content'>
+<div id='text'>
+<div id='description'></div>
+<div id='method-list'>
+<h2>Methods</h2>
+<h3>Public Instance</h3>
+<ol>
+<li><a href="#method-i-personal_ecRecover">personal_ecRecover</a></li>
+<li><a href="#method-i-personal_importRawKey">personal_importRawKey</a></li>
+<li><a href="#method-i-personal_listAccounts">personal_listAccounts</a></li>
+<li><a href="#method-i-personal_lockAccount">personal_lockAccount</a></li>
+<li><a href="#method-i-personal_newAccount">personal_newAccount</a></li>
+<li><a href="#method-i-personal_sign">personal_sign</a></li>
+<li><a href="#method-i-personal_signAndSendTransaction">personal_signAndSendTransaction</a></li>
+<li><a href="#method-i-personal_unlockAccount">personal_unlockAccount</a></li>
+</ol>
+</div>
+<div id='context'>
+</div>
+<div id='section'>
+<div id='methods'>
+<h2>Public Instance methods</h2>
+<div class='method public-instance' id='method-method-i-personal_ecRecover'>
+<a name='method-i-personal_ecRecover'></a>
+<div class='synopsis'>
+<span class='name'>personal_ecRecover</span>
+<span class='arguments'>(message, signature)</span>
+
+</div>
+<div class='description'>
+
+<p>See <a
+href="https://github.com/ethereum/go-ethereum/wiki/Management-APIs#personal_ecrecover">github.com/ethereum/go-ethereum/wiki/Management-APIs#personal_ecrecover</a></p>
+
+</div>
+<div class='source'>
+<a class='source-toggle' href='#' onclick='toggleCode(&#39;method-i-personal_ecRecover-source&#39;); return false'>
+[show source]
+</a>
+<pre id='method-i-personal_ecRecover-source'><span class="ruby-comment"># File personal_calls.rb, line 50</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">personal_ecRecover</span>(<span class="ruby-identifier">message</span>, <span class="ruby-identifier">signature</span>)&#x000A;<span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;personal_ecRecover&quot;</span>,[<span class="ruby-identifier">message</span>, <span class="ruby-identifier">signature</span>])&#x000A;<span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+</div>
+</div>
+<div class='method public-instance' id='method-method-i-personal_importRawKey'>
+<a name='method-i-personal_importRawKey'></a>
+<div class='synopsis'>
+<span class='name'>personal_importRawKey</span>
+<span class='arguments'>(key, passphrase)</span>
+
+</div>
+<div class='description'>
+
+<p>See <a
+href="https://github.com/ethereum/go-ethereum/wiki/Management-APIs#personal_importrawkey">github.com/ethereum/go-ethereum/wiki/Management-APIs#personal_importrawkey</a></p>
+
+</div>
+<div class='source'>
+<a class='source-toggle' href='#' onclick='toggleCode(&#39;method-i-personal_importRawKey-source&#39;); return false'>
+[show source]
+</a>
+<pre id='method-i-personal_importRawKey-source'><span class="ruby-comment"># File personal_calls.rb, line 10</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">personal_importRawKey</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">passphrase</span>)&#x000A;<span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;personal_importRawKey&quot;</span>,[<span class="ruby-identifier">key</span>, <span class="ruby-identifier">passphrase</span>])&#x000A;<span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+</div>
+</div>
+<div class='method public-instance' id='method-method-i-personal_listAccounts'>
+<a name='method-i-personal_listAccounts'></a>
+<div class='synopsis'>
+<span class='name'>personal_listAccounts</span>
+<span class='arguments'>()</span>
+
+</div>
+<div class='description'>
+
+<p>See <a
+href="https://github.com/ethereum/go-ethereum/wiki/Management-APIs#personal_listaccounts">github.com/ethereum/go-ethereum/wiki/Management-APIs#personal_listaccounts</a></p>
+
+</div>
+<div class='source'>
+<a class='source-toggle' href='#' onclick='toggleCode(&#39;method-i-personal_listAccounts-source&#39;); return false'>
+[show source]
+</a>
+<pre id='method-i-personal_listAccounts-source'><span class="ruby-comment"># File personal_calls.rb, line 4</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">personal_listAccounts</span>()&#x000A;<span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;personal_listAccounts&quot;</span>)&#x000A;<span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+</div>
+</div>
+<div class='method public-instance' id='method-method-i-personal_lockAccount'>
+<a name='method-i-personal_lockAccount'></a>
+<div class='synopsis'>
+<span class='name'>personal_lockAccount</span>
+<span class='arguments'>(account)</span>
+
+</div>
+<div class='description'>
+
+<p>See <a
+href="https://github.com/ethereum/go-ethereum/wiki/Management-APIs#personal_lockaccount">github.com/ethereum/go-ethereum/wiki/Management-APIs#personal_lockaccount</a></p>
+
+</div>
+<div class='source'>
+<a class='source-toggle' href='#' onclick='toggleCode(&#39;method-i-personal_lockAccount-source&#39;); return false'>
+[show source]
+</a>
+<pre id='method-i-personal_lockAccount-source'><span class="ruby-comment"># File personal_calls.rb, line 28</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">personal_lockAccount</span>(<span class="ruby-identifier">account</span>)&#x000A;<span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;personal_lockAccount&quot;</span>,[<span class="ruby-identifier">account</span>])&#x000A;<span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+</div>
+</div>
+<div class='method public-instance' id='method-method-i-personal_newAccount'>
+<a name='method-i-personal_newAccount'></a>
+<div class='synopsis'>
+<span class='name'>personal_newAccount</span>
+<span class='arguments'>(password)</span>
+
+</div>
+<div class='description'>
+
+<p>See <a
+href="https://github.com/ethereum/go-ethereum/wiki/Management-APIs#personal_newaccount">github.com/ethereum/go-ethereum/wiki/Management-APIs#personal_newaccount</a></p>
+
+</div>
+<div class='source'>
+<a class='source-toggle' href='#' onclick='toggleCode(&#39;method-i-personal_newAccount-source&#39;); return false'>
+[show source]
+</a>
+<pre id='method-i-personal_newAccount-source'><span class="ruby-comment"># File personal_calls.rb, line 16</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">personal_newAccount</span>(<span class="ruby-identifier">password</span>)&#x000A;<span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;personal_newAccount&quot;</span>,[<span class="ruby-identifier">password</span>])&#x000A;<span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+</div>
+</div>
+<div class='method public-instance' id='method-method-i-personal_sign'>
+<a name='method-i-personal_sign'></a>
+<div class='synopsis'>
+<span class='name'>personal_sign</span>
+<span class='arguments'>(message, account, password)</span>
+
+</div>
+<div class='description'>
+
+<p>See <a
+href="https://github.com/ethereum/go-ethereum/wiki/Management-APIs#personal_sign">github.com/ethereum/go-ethereum/wiki/Management-APIs#personal_sign</a></p>
+
+</div>
+<div class='source'>
+<a class='source-toggle' href='#' onclick='toggleCode(&#39;method-i-personal_sign-source&#39;); return false'>
+[show source]
+</a>
+<pre id='method-i-personal_sign-source'><span class="ruby-comment"># File personal_calls.rb, line 44</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">personal_sign</span>(<span class="ruby-identifier">message</span>, <span class="ruby-identifier">account</span>, <span class="ruby-identifier">password</span>)&#x000A;<span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;personal_sign&quot;</span>,[<span class="ruby-identifier">message</span>, <span class="ruby-identifier">account</span>, <span class="ruby-identifier">password</span>])&#x000A;<span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+</div>
+</div>
+<div class='method public-instance' id='method-method-i-personal_signAndSendTransaction'>
+<a name='method-i-personal_signAndSendTransaction'></a>
+<div class='synopsis'>
+<span class='name'>personal_signAndSendTransaction</span>
+<span class='arguments'>(transaction, passphrase)</span>
+
+</div>
+<div class='description'>
+
+<p>See <a
+href="https://github.com/ethereum/go-ethereum/wiki/Management-APIs#personal_signandsendtransaction">github.com/ethereum/go-ethereum/wiki/Management-APIs#personal_signandsendtransaction</a></p>
+
+</div>
+<div class='source'>
+<a class='source-toggle' href='#' onclick='toggleCode(&#39;method-i-personal_signAndSendTransaction-source&#39;); return false'>
+[show source]
+</a>
+<pre id='method-i-personal_signAndSendTransaction-source'><span class="ruby-comment"># File personal_calls.rb, line 22</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">personal_signAndSendTransaction</span>(<span class="ruby-identifier">transaction</span>, <span class="ruby-identifier">passphrase</span>)&#x000A;<span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;personal_signAndSendTransaction&quot;</span>,[<span class="ruby-identifier">transaction</span>, <span class="ruby-identifier">passphrase</span>])&#x000A;<span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+</div>
+</div>
+<div class='method public-instance' id='method-method-i-personal_unlockAccount'>
+<a name='method-i-personal_unlockAccount'></a>
+<div class='synopsis'>
+<span class='name'>personal_unlockAccount</span>
+<span class='arguments'>(account, passphrase, duration)</span>
+
+</div>
+<div class='description'>
+
+<p>Be careful with this method. Do not leave an account unlocked, as that
+creates an opportunity for an attacker to make transactions from that
+account. In general <a
+href="PersonalCalls.html#method-i-personal_signAndSendTransaction">#personal_signAndSendTransaction</a>
+is a better option than unlock -&gt; send -&gt; lock See <a
+href="https://github.com/ethereum/go-ethereum/wiki/Management-APIs#personal_unlockaccount">github.com/ethereum/go-ethereum/wiki/Management-APIs#personal_unlockaccount</a></p>
+
+</div>
+<div class='source'>
+<a class='source-toggle' href='#' onclick='toggleCode(&#39;method-i-personal_unlockAccount-source&#39;); return false'>
+[show source]
+</a>
+<pre id='method-i-personal_unlockAccount-source'><span class="ruby-comment"># File personal_calls.rb, line 38</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">personal_unlockAccount</span>(<span class="ruby-identifier">account</span>, <span class="ruby-identifier">passphrase</span>, <span class="ruby-identifier">duration</span>)&#x000A;<span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;personal_unlockAccount&quot;</span>,[<span class="ruby-identifier">account</span>, <span class="ruby-identifier">passphrase</span>, <span class="ruby-identifier">duration</span>])&#x000A;<span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div id='footer-push'></div>
+</div>
+<div id='footer'>
+<a href="https://github.com/rdoc/hanna-nouveau"><strong>Hanna Nouveau</strong> RDoc template</a>
+</div>
+</body>
+</html>
