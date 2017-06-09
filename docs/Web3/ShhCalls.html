@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>module Web3::ShhCalls - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+  var index_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/darkfish.js"></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link href="../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="module">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-i-shh_addToGroup">#shh_addToGroup</a>
+    
+    <li ><a href="#method-i-shh_getFilterChanges">#shh_getFilterChanges</a>
+    
+    <li ><a href="#method-i-shh_getMessages">#shh_getMessages</a>
+    
+    <li ><a href="#method-i-shh_hasIdentity">#shh_hasIdentity</a>
+    
+    <li ><a href="#method-i-shh_newFilter">#shh_newFilter</a>
+    
+    <li ><a href="#method-i-shh_newGroup">#shh_newGroup</a>
+    
+    <li ><a href="#method-i-shh_newIdentity">#shh_newIdentity</a>
+    
+    <li ><a href="#method-i-shh_post">#shh_post</a>
+    
+    <li ><a href="#method-i-shh_uninstallFilter">#shh_uninstallFilter</a>
+    
+    <li ><a href="#method-i-shh_version">#shh_version</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="module-Web3::ShhCalls">
+  <h1 id="module-Web3::ShhCalls" class="module">
+    module Web3::ShhCalls
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-shh_addToGroup" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">shh_addToGroup</span><span
+            class="method-args">(address)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>See <a
+href="https://github.com/ethereum/wiki/wiki/JSON-RPC#shh_addtogroup">github.com/ethereum/wiki/wiki/JSON-RPC#shh_addtogroup</a></p>
+          
+          
+
+          
+          <div class="method-source-code" id="shh_addToGroup-source">
+            <pre><span class="ruby-comment"># File shh_calls.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">shh_addToGroup</span>(<span class="ruby-identifier">address</span>)
+<span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;shh_addToGroup&quot;</span>,[<span class="ruby-identifier">address</span>])
+<span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-shh_getFilterChanges" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">shh_getFilterChanges</span><span
+            class="method-args">(id)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>See <a
+href="https://github.com/ethereum/wiki/wiki/JSON-RPC#shh_getfilterchanges">github.com/ethereum/wiki/wiki/JSON-RPC#shh_getfilterchanges</a></p>
+          
+          
+
+          
+          <div class="method-source-code" id="shh_getFilterChanges-source">
+            <pre><span class="ruby-comment"># File shh_calls.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">shh_getFilterChanges</span>(<span class="ruby-identifier">id</span>)
+<span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;shh_getFilterChanges&quot;</span>,[<span class="ruby-identifier">id</span>])
+<span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-shh_getMessages" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">shh_getMessages</span><span
+            class="method-args">(id)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>See <a
+href="https://github.com/ethereum/wiki/wiki/JSON-RPC#shh_getmessages">github.com/ethereum/wiki/wiki/JSON-RPC#shh_getmessages</a></p>
+          
+          
+
+          
+          <div class="method-source-code" id="shh_getMessages-source">
+            <pre><span class="ruby-comment"># File shh_calls.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">shh_getMessages</span>(<span class="ruby-identifier">id</span>)
+<span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;shh_getMessages&quot;</span>,[<span class="ruby-identifier">id</span>])
+<span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-shh_hasIdentity" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">shh_hasIdentity</span><span
+            class="method-args">(address)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>See <a
+href="https://github.com/ethereum/wiki/wiki/JSON-RPC#shh_hasidentity">github.com/ethereum/wiki/wiki/JSON-RPC#shh_hasidentity</a></p>
+          
+          
+
+          
+          <div class="method-source-code" id="shh_hasIdentity-source">
+            <pre><span class="ruby-comment"># File shh_calls.rb, line 22</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">shh_hasIdentity</span>(<span class="ruby-identifier">address</span>)
+<span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;shh_hasIdentity&quot;</span>,[<span class="ruby-identifier">address</span>])
+<span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-shh_newFilter" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">shh_newFilter</span><span
+            class="method-args">(filter_object)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>See <a
+href="https://github.com/ethereum/wiki/wiki/JSON-RPC#shh_newfilter">github.com/ethereum/wiki/wiki/JSON-RPC#shh_newfilter</a></p>
+          
+          
+
+          
+          <div class="method-source-code" id="shh_newFilter-source">
+            <pre><span class="ruby-comment"># File shh_calls.rb, line 40</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">shh_newFilter</span>(<span class="ruby-identifier">filter_object</span>)
+<span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;shh_newFilter&quot;</span>,[<span class="ruby-identifier">filter_object</span>])
+<span class="ruby-identifier">to_decimal</span> <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-shh_newGroup" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">shh_newGroup</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>See <a
+href="https://github.com/ethereum/wiki/wiki/JSON-RPC#shh_newgroup">github.com/ethereum/wiki/wiki/JSON-RPC#shh_newgroup</a></p>
+          
+          
+
+          
+          <div class="method-source-code" id="shh_newGroup-source">
+            <pre><span class="ruby-comment"># File shh_calls.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">shh_newGroup</span>()
+<span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;shh_newGroup&quot;</span>)
+<span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-shh_newIdentity" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">shh_newIdentity</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>See <a
+href="https://github.com/ethereum/wiki/wiki/JSON-RPC#shh_newidentity">github.com/ethereum/wiki/wiki/JSON-RPC#shh_newidentity</a></p>
+          
+          
+
+          
+          <div class="method-source-code" id="shh_newIdentity-source">
+            <pre><span class="ruby-comment"># File shh_calls.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">shh_newIdentity</span>()
+<span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;shh_newIdentity&quot;</span>)
+<span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-shh_post" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">shh_post</span><span
+            class="method-args">(post_object)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>See <a
+href="https://github.com/ethereum/wiki/wiki/JSON-RPC#shh_post">github.com/ethereum/wiki/wiki/JSON-RPC#shh_post</a></p>
+          
+          
+
+          
+          <div class="method-source-code" id="shh_post-source">
+            <pre><span class="ruby-comment"># File shh_calls.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">shh_post</span>(<span class="ruby-identifier">post_object</span>)
+<span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;shh_post&quot;</span>,[<span class="ruby-identifier">post_object</span>])
+<span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-shh_uninstallFilter" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">shh_uninstallFilter</span><span
+            class="method-args">(id)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>See <a
+href="https://github.com/ethereum/wiki/wiki/JSON-RPC#shh_uninstallfilter">github.com/ethereum/wiki/wiki/JSON-RPC#shh_uninstallfilter</a></p>
+          
+          
+
+          
+          <div class="method-source-code" id="shh_uninstallFilter-source">
+            <pre><span class="ruby-comment"># File shh_calls.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">shh_uninstallFilter</span>(<span class="ruby-identifier">id</span>)
+<span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;shh_uninstallFilter&quot;</span>,[<span class="ruby-identifier">id</span>])
+<span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-shh_version" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">shh_version</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>See <a
+href="https://github.com/ethereum/wiki/wiki/JSON-RPC#shh_version">github.com/ethereum/wiki/wiki/JSON-RPC#shh_version</a></p>
+          
+          
+
+          
+          <div class="method-source-code" id="shh_version-source">
+            <pre><span class="ruby-comment"># File shh_calls.rb, line 4</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">shh_version</span>()
+<span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;shh_version&quot;</span>)
+<span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://rdoc.github.io/rdoc">RDoc</a> 5.1.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

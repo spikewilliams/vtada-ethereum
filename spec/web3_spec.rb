@@ -240,6 +240,19 @@ RSpec.describe Web3 do
     end
   end
 
+
+  context "unlock send pending resend and lock " do
+    w3 = Web3. new
+    transaction = {"from"=> ETH_ACCOUNTS[[0],  "to" => ETH_ACCOUNTS[[1],  "value" => w3.ether_to_0xwei(0.001)}
+    w3.personal_unlockAccount(ETH_ACCOUNTS[0], "testpassword", 60);
+    w3.eth_sendTransaction(transaction)
+    t2 = w3.eth_pendingTransactions()[0]
+    w3.eth_resend(t2, w3.to_0x(100000), w3.to_0x(3333333))
+    w3.eth_pendingTransactions()
+    w3.personal_lockAccount(ETH_ACCOUNTS[0])
+  end
+
+
   context "request for eth_sendRawTransaction " do
     it "TEST NOT IMPLEMENTED" do
       vt = Web3. new

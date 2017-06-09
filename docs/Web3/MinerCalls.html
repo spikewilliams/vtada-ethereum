@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>module Web3::MinerCalls - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+  var index_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/darkfish.js"></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link href="../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="module">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-i-miner_makeDAG">#miner_makeDAG</a>
+    
+    <li ><a href="#method-i-miner_setExtra">#miner_setExtra</a>
+    
+    <li ><a href="#method-i-miner_setGasPrice">#miner_setGasPrice</a>
+    
+    <li ><a href="#method-i-miner_start">#miner_start</a>
+    
+    <li ><a href="#method-i-miner_startAutoDAG">#miner_startAutoDAG</a>
+    
+    <li ><a href="#method-i-miner_stop">#miner_stop</a>
+    
+    <li ><a href="#method-i-miner_stopAutoDAG">#miner_stopAutoDAG</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="module-Web3::MinerCalls">
+  <h1 id="module-Web3::MinerCalls" class="module">
+    module Web3::MinerCalls
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-miner_makeDAG" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">miner_makeDAG</span><span
+            class="method-args">(number)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>See <a
+href="https://github.com/ethereum/wiki/wiki/JSON-RPC#miner_makedag">github.com/ethereum/wiki/wiki/JSON-RPC#miner_makedag</a></p>
+          
+          
+
+          
+          <div class="method-source-code" id="miner_makeDAG-source">
+            <pre><span class="ruby-comment"># File miner_calls.rb, line 4</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">miner_makeDAG</span>(<span class="ruby-identifier">number</span>)
+<span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;miner_makeDAG&quot;</span>,[<span class="ruby-identifier">number</span>])
+<span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-miner_setExtra" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">miner_setExtra</span><span
+            class="method-args">(extra)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>See <a
+href="https://github.com/ethereum/wiki/wiki/JSON-RPC#miner_setextra">github.com/ethereum/wiki/wiki/JSON-RPC#miner_setextra</a></p>
+          
+          
+
+          
+          <div class="method-source-code" id="miner_setExtra-source">
+            <pre><span class="ruby-comment"># File miner_calls.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">miner_setExtra</span>(<span class="ruby-identifier">extra</span>)
+<span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;miner_setExtra&quot;</span>,[<span class="ruby-identifier">extra</span>])
+<span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-miner_setGasPrice" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">miner_setGasPrice</span><span
+            class="method-args">(gasPrice)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>See <a
+href="https://github.com/ethereum/wiki/wiki/JSON-RPC#miner_setgasprice">github.com/ethereum/wiki/wiki/JSON-RPC#miner_setgasprice</a></p>
+          
+          
+
+          
+          <div class="method-source-code" id="miner_setGasPrice-source">
+            <pre><span class="ruby-comment"># File miner_calls.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">miner_setGasPrice</span>(<span class="ruby-identifier">gasPrice</span>)
+<span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;miner_setGasPrice&quot;</span>,[<span class="ruby-identifier">gasPrice</span>])
+<span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-miner_start" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">miner_start</span><span
+            class="method-args">(threads)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>See <a
+href="https://github.com/ethereum/wiki/wiki/JSON-RPC#miner_start">github.com/ethereum/wiki/wiki/JSON-RPC#miner_start</a></p>
+          
+          
+
+          
+          <div class="method-source-code" id="miner_start-source">
+            <pre><span class="ruby-comment"># File miner_calls.rb, line 22</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">miner_start</span>(<span class="ruby-identifier">threads</span>)
+<span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;miner_start&quot;</span>,[<span class="ruby-identifier">threads</span>])
+<span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-miner_startAutoDAG" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">miner_startAutoDAG</span><span
+            class="method-args">(number)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>See <a
+href="https://github.com/ethereum/wiki/wiki/JSON-RPC#miner_startautodag">github.com/ethereum/wiki/wiki/JSON-RPC#miner_startautodag</a></p>
+          
+          
+
+          
+          <div class="method-source-code" id="miner_startAutoDAG-source">
+            <pre><span class="ruby-comment"># File miner_calls.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">miner_startAutoDAG</span>(<span class="ruby-identifier">number</span>)
+<span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;miner_startAutoDAG&quot;</span>,[<span class="ruby-identifier">number</span>])
+<span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-miner_stop" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">miner_stop</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>See <a
+href="https://github.com/ethereum/wiki/wiki/JSON-RPC#miner_stop">github.com/ethereum/wiki/wiki/JSON-RPC#miner_stop</a></p>
+          
+          
+
+          
+          <div class="method-source-code" id="miner_stop-source">
+            <pre><span class="ruby-comment"># File miner_calls.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">miner_stop</span>()
+<span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;miner_stop&quot;</span>)
+<span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-miner_stopAutoDAG" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">miner_stopAutoDAG</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>See <a
+href="https://github.com/ethereum/wiki/wiki/JSON-RPC#miner_stopautodag">github.com/ethereum/wiki/wiki/JSON-RPC#miner_stopautodag</a></p>
+          
+          
+
+          
+          <div class="method-source-code" id="miner_stopAutoDAG-source">
+            <pre><span class="ruby-comment"># File miner_calls.rb, line 40</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">miner_stopAutoDAG</span>()
+<span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;miner_stopAutoDAG&quot;</span>)
+<span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://rdoc.github.io/rdoc">RDoc</a> 5.1.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
