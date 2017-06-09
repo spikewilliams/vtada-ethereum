@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang='en'>
+<head>
+<title>Web3::NetCalls</title>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+<link href='../../css/style.css' media='screen' rel='stylesheet' type='text/css'>
+<script type='text/javascript'>
+  function popupCode(url) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+  
+  function toggleCode(id) {
+    var code = document.getElementById(id)
+  
+    code.style.display = code.style.display != 'block' ? 'block' : 'none'
+    return true
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln('<' + 'style type="text/css">.method .source pre { display: none }<\/style>')
+</script>
+</head>
+<body class='page'>
+<div class='class' id='wrapper'>
+<div class='header'>
+<h1 class='name'><span class='type'>module</span>
+Web3::NetCalls
+</h1>
+<ol class='paths'>
+<li>
+<a href="../../files/net_calls_rb.html">net_calls.rb</a>
+</li>
+</ol>
+</div>
+<div id='content'>
+<div id='text'>
+<div id='description'></div>
+<div id='method-list'>
+<h2>Methods</h2>
+<h3>Public Instance</h3>
+<ol>
+<li><a href="#method-i-net_listening">net_listening</a></li>
+<li><a href="#method-i-net_peerCount">net_peerCount</a></li>
+<li><a href="#method-i-net_version">net_version</a></li>
+</ol>
+</div>
+<div id='context'>
+</div>
+<div id='section'>
+<div id='methods'>
+<h2>Public Instance methods</h2>
+<div class='method public-instance' id='method-method-i-net_listening'>
+<a name='method-i-net_listening'></a>
+<div class='synopsis'>
+<span class='name'>net_listening</span>
+<span class='arguments'>()</span>
+
+</div>
+<div class='description'>
+
+<p>See <a
+href="https://github.com/ethereum/wiki/wiki/JSON-RPC#net_listening">github.com/ethereum/wiki/wiki/JSON-RPC#net_listening</a></p>
+
+</div>
+<div class='source'>
+<a class='source-toggle' href='#' onclick='toggleCode(&#39;method-i-net_listening-source&#39;); return false'>
+[show source]
+</a>
+<pre id='method-i-net_listening-source'><span class="ruby-comment"># File net_calls.rb, line 16</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">net_listening</span>()&#x000A;<span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;net_listening&quot;</span>)&#x000A;<span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+</div>
+</div>
+<div class='method public-instance' id='method-method-i-net_peerCount'>
+<a name='method-i-net_peerCount'></a>
+<div class='synopsis'>
+<span class='name'>net_peerCount</span>
+<span class='arguments'>()</span>
+
+</div>
+<div class='description'>
+
+<p>See <a
+href="https://github.com/ethereum/wiki/wiki/JSON-RPC#net_peercount">github.com/ethereum/wiki/wiki/JSON-RPC#net_peercount</a></p>
+
+</div>
+<div class='source'>
+<a class='source-toggle' href='#' onclick='toggleCode(&#39;method-i-net_peerCount-source&#39;); return false'>
+[show source]
+</a>
+<pre id='method-i-net_peerCount-source'><span class="ruby-comment"># File net_calls.rb, line 10</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">net_peerCount</span>()&#x000A;<span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;net_peerCount&quot;</span>)&#x000A;<span class="ruby-identifier">to_decimal</span> <span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+</div>
+</div>
+<div class='method public-instance' id='method-method-i-net_version'>
+<a name='method-i-net_version'></a>
+<div class='synopsis'>
+<span class='name'>net_version</span>
+<span class='arguments'>()</span>
+
+</div>
+<div class='description'>
+
+<p>See <a
+href="https://github.com/ethereum/wiki/wiki/JSON-RPC#net_version">github.com/ethereum/wiki/wiki/JSON-RPC#net_version</a></p>
+
+</div>
+<div class='source'>
+<a class='source-toggle' href='#' onclick='toggleCode(&#39;method-i-net_version-source&#39;); return false'>
+[show source]
+</a>
+<pre id='method-i-net_version-source'><span class="ruby-comment"># File net_calls.rb, line 4</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-identifier">net_version</span>()&#x000A;<span class="ruby-identifier">response</span> = <span class="ruby-identifier">do_request</span>(<span class="ruby-string">&quot;net_version&quot;</span>)&#x000A;<span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;result&quot;</span>]&#x000A;<span class="ruby-keyword">end</span></pre>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div id='footer-push'></div>
+</div>
+<div id='footer'>
+<a href="https://github.com/rdoc/hanna-nouveau"><strong>Hanna Nouveau</strong> RDoc template</a>
+</div>
+</body>
+</html>
