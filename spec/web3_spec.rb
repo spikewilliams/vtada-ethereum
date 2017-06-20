@@ -243,7 +243,7 @@ RSpec.describe Web3 do
 
   context "unlock send pending resend and lock " do
     w3 = Web3. new
-    transaction = {"from"=> ETH_ACCOUNTS[[0],  "to" => ETH_ACCOUNTS[[1],  "value" => w3.ether_to_0xwei(0.001)}
+    transaction = {"from"=> ETH_ACCOUNTS[0],  "to" => ETH_ACCOUNTS[1],  "value" => w3.ether_to_0xwei(0.001)}
     w3.personal_unlockAccount(ETH_ACCOUNTS[0], "testpassword", 60);
     w3.eth_sendTransaction(transaction)
     t2 = w3.eth_pendingTransactions()[0]

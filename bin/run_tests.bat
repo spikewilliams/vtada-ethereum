@@ -1,1 +1,1 @@
-rspec -I . --format doc spec/vtada_rpc_web3.rb
+rspec -I . --format doc spec/web3_spec.rb
