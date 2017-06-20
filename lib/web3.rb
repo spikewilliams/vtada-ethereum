@@ -102,10 +102,7 @@ include Web3::MinerCalls
     decimal.to_s(16) #this will throw an error if a non-integer is used
   end
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 765c1d4443a3e6c619b75f300db3722f9591db65
   # Converts a decimal integer to a hex string that starts with a 0x marker
   def to_0x(decimal)
     "0x" + to_hex(decimal)
@@ -143,7 +140,6 @@ include Web3::MinerCalls
     personal_signAndSendTransaction(trans, password)
   end
 
-<<<<<<< HEAD
   def createContract(from_address, bin_file, password)
     trans = {}
     trans["from"] = from_address
@@ -157,16 +153,9 @@ include Web3::MinerCalls
     receipt = eth_getTransactionReceipt tx_number
     receipt["contract"]
   end
-=======
 
 
 
-
-
-
-
-
->>>>>>> 765c1d4443a3e6c619b75f300db3722f9591db65
 end
 
 w3 = Web3. new
